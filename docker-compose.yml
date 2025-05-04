@@ -10,9 +10,9 @@ services:
       - '3000:3000'
       - '5900:5901'
     environment: &environment
-      DEVELOPMENT_DATABASE_URL: 'postgres://postgres:@postgres:5432/tournament_manager_2_development'
-      TEST_DATABASE_URL: 'postgres://postgres:@postgres:5432/tournament_manager_2_test'
-      DATABASE_URL: 'postgres://postgres:@postgres:5432/tournament_manager_2_development'
+      DEVELOPMENT_DATABASE_URL: 'postgres://postgres:@postgres:5432/brello_development'
+      TEST_DATABASE_URL: 'postgres://postgres:@postgres:5432/brello_test'
+      DATABASE_URL: 'postgres://postgres:@postgres:5432/brello_development'
       REDIS_URL: 'redis://redis:6379'
       ENCRYPT_SECRET_KEY: 'QRDUGL+6BlKart8/U4o2kMiHpPgAoNrEIPX1KKVaR1c='
       ENCRYPT_IV: 'gwYE42O06SriGPeX'
