@@ -1,0 +1,6 @@
+<%= simple_form_for @card do |form| %>
+  <%= yield %>
+  <%= form.input :title %>
+  <%= form.input :description %>
+  <%= form.button :submit %>
+<% end %>
