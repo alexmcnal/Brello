@@ -1,8 +1,10 @@
+<%= link_to card_path(card) do %>
   <div class="card">
-    <div class="card__title">
-      <%= card.title %>
-    </div>
-    <div class="card__description">
-      <%= card.description %>
-    </div>
+  <div class="card__title">
+    <%= card.title %>
   </div>
+  <div class="card__description">
+    <%= card.description %>
+  </div>
+</div>
+<% end %>
