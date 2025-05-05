@@ -67,3 +67,5 @@ end
 
 
 gem "guard-rspec", "~> 4.7"
+
+gem "hotwire-spark", "~> 0.1.13"
