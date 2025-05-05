@@ -8,3 +8,47 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ :root {
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-2xl: 1536px;
+
+  --font-size-xxs: 0.625rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+
+  --color-black: #111111;
+  --color-white: #ffffff;
+  --color-red: #e53e3e;
+  --color-blue: #3b82f6;
+  --color-green: #10b981;
+  --color-yellow: #f59e0b;
+  --color-light-yellow: #fef08a;
+  --color-purple: #8b5cf6;
+  --color-pink: #ec4899;
+  --color-indigo: #6366f1;
+  --color-cyan: #06b6d4;
+  --color-dark-grey: #555555;
+  --color-very-dark-grey: #333333;
+  --color-medium-grey: #888888;
+  --color-light-grey: #aaaaaa;
+  --color-extra-light-grey: #cccccc;
+  }

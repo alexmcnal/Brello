@@ -140,6 +140,10 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    hotwire-spark (0.1.13)
+      listen
+      rails (>= 7.0.0)
+      zeitwerk
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -422,6 +426,7 @@ DEPENDENCIES
   debug
   guard-rails (~> 0.8.1)
   guard-rspec (~> 4.7)
+  hotwire-spark (~> 0.1.13)
   importmap-rails
   jbuilder
   kamal
