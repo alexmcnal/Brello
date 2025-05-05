@@ -10,9 +10,9 @@ require 'capybara/cuprite'
 # Load the custom selectors from the support directory
 Dir[Rails.root.join('spec/support/selectors/**/*.rb')].each { |f| require f }
 
-RSpec.configure do |config|
-  config.include(ScopedSelectors, type: :feature)
-end
+# RSpec.configure do |config|
+#   config.include(ScopedSelectors, type: :feature)
+# end
 
 require 'pry'
 
