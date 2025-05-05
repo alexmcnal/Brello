@@ -45,8 +45,40 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
           expect(page).to have_content('This is a new card'), 'Card description not found'
         end
       end
+    end
+  end
 
+  describe 'Edit existing card' do
+    scenario 'existing cards can be edited and adhere to changes' do
+      visit cards_path
 
+      click_on 'Add Card'
+      fill_in 'Title', with: 'New Card'
+      fill_in 'Description', with: 'This is a new card'
+      click_on 'Create Card'
+
+      visit cards_path
+
+      expect(page).to have_css('.card'), 'No cards found on the page'
+      within('.card') do
+        expect(page).to have_css('.card__title'), 'Card title div not found'
+        expect(page).to have_css('.card__description'), 'Card description div not found'
+
+        within('.card__title') do
+          expect(page).to have_content('New Card'), 'Card title not found'
+        end
+        within('.card__description') do
+          expect(page).to have_content('This is a new card'), 'Card description not found'
+        end
+      end
+
+      click_on 'New Card'
+      click_on 'Edit Card'
+      fill_in 'Title', with: 'New Card Edit'
+      fill_in 'Description', with: 'This is a new card edit'
+      click_on 'Update Card'
+      expect(page).to have_content('New Card Edit'), 'Card title has not adhered to changed params'
+      expect(page).to have_content('This is a new card edit'), 'Card description has not adhered to changed params'
     end
   end
 
