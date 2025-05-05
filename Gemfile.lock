@@ -136,6 +136,10 @@ GEM
     guard-rails (0.8.1)
       guard (~> 2.11)
       guard-compat (~> 1.0)
+    guard-rspec (4.7.3)
+      guard (~> 2.1)
+      guard-compat (~> 1.1)
+      rspec (>= 2.99.0, < 4.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -288,6 +292,10 @@ GEM
     reline (0.6.1)
       io-console (~> 0.5)
     rexml (3.4.1)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
     rspec-core (3.13.3)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.4)
@@ -413,6 +421,7 @@ DEPENDENCIES
   capybara
   debug
   guard-rails (~> 0.8.1)
+  guard-rspec (~> 4.7)
   importmap-rails
   jbuilder
   kamal

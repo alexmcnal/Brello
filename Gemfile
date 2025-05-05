@@ -65,3 +65,5 @@ group :test do
 end
 
 
+
+gem "guard-rspec", "~> 4.7"
