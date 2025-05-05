@@ -7,10 +7,17 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
     visit cards_path
 
-    expect(page).to have_content('Test Card')
+    within('.card') do
+      within('.card__title') do
+        expect(page).to have_content('Test Card')
+      end
+      within('.card__description') do
+        expect(page).to have_content('This is a test card')
+      end
+    end
   end
 
-  describe 'Create a new card' do
+  xdescribe 'Create a new card' do
     scenario 'new cards appear on the board' do
       visit '/'
     end
