@@ -1,14 +1,4 @@
 <h1>Cards#index</h1>
 <p>Find me in app/views/cards/index.html.erb</p>
 
-
-<% @cards.each do |card| %>
-  <div class="card">
-    <div class="card__title">
-      <%= card.title %>
-    </div>
-    <div class="card__description">
-      <%= card.description %>
-    </div>
-  </div>
-<% end %>
+<%= render @cards %>
