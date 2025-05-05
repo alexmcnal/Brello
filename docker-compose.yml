@@ -1,6 +1,5 @@
 services:
   web:
-    cpus: "0.5"  # Works outside Swarm
     image: dmcnally/common-ruby:development-${APP_VERSION}
     command: sleep infinity
     volumes:
