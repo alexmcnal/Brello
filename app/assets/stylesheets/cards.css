@@ -5,8 +5,18 @@
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   padding: 1rem;
+
+  width: 16rem;
 }
 
 .card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+}
 
+.card__description {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-base);
+  color: var(--color-dark-grey);
 }
