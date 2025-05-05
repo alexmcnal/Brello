@@ -7,12 +7,17 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
     visit cards_path
 
+    expect(page).to have_css('.card'), 'No cards found on the page'
+
     within('.card') do
+      expect(page).to have_css('.card__title'), 'Card title div not found'
+      expect(page).to have_css('.card__description'), 'Card description div not found'
+
       within('.card__title') do
-        expect(page).to have_content('Test Card')
+        expect(page).to have_content('Test Card'), 'Card title not found'
       end
       within('.card__description') do
-        expect(page).to have_content('This is a test card')
+        expect(page).to have_content('This is a test card'), 'Card description not found'
       end
     end
   end
