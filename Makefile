@@ -20,9 +20,6 @@ server:
 web_server:
 	docker compose exec web bundle exec rails s -b 0.0.0.0
 
-css_server:
-	docker compose exec web foreman start --procfile Procfile.dev --formation css=1
-
 background_jobs:
 	docker compose exec web rails solid_queue:start
 
