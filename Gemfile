@@ -62,7 +62,7 @@ group :development do
   gem "web-console"
 end
 
-gem "authentication-zero", "~> 3.0"
+gem "authentication-zero", "~> 4.0"
 
 gem "guard-rspec", "~> 4.7"
 
