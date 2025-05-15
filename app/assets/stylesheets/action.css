@@ -12,6 +12,14 @@
   max-width: 50rem;
 }
 
-.user_email {
-  font-weight: var(--font-weight-bold);
+.action {
+  /* padding: 1rem; */
+}
+
+.action__changes {
+  margin-left: 2rem;
+}
+
+.user_email, .column_name, .column_data {
+  font-weight: var(--font-weight-semi-bold);
 }

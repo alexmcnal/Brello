@@ -39,3 +39,9 @@
   font-size: var(--font-size-base);
   color: var(--color-dark-grey);
 }
+
+.card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

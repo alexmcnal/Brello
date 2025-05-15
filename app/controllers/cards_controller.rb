@@ -38,27 +38,17 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find(params[:id])
+    @card.attributes = card_params
 
-    current_title = @card.title
-    current_description = @card.description
+    card_changes = @card.changes
 
-    if @card.update(card_params)
-      changes_metadata = {}
-
-      if @card.title != current_title
-        changes_metadata[:title] = { from: current_title, to: @card.title }
-      end
-
-      if @card.description != current_description
-        changes_metadata[:description] = { from: current_description, to: @card.description }
-      end
-
-      if changes_metadata.any?
+    if @card.save
+      if card_changes.any?
         Action.create!(
           user: current_user,
           card: @card,
           action: "updated_card",
-          metadata: changes_metadata
+          metadata: card_changes
         )
       end
 
