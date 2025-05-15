@@ -38,8 +38,11 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find(params[:id])
-    @card.attributes = card_params
 
+    current_title = @card.title
+    current_description = @card.description
+
+    @card.attributes = card_params
     card_changes = @card.changes
 
     if @card.save
@@ -48,7 +51,7 @@ class CardsController < ApplicationController
           user: current_user,
           card: @card,
           action: "updated_card",
-          metadata: card_changes
+          metadata: changes_metadata
         )
       end
 

@@ -1,6 +1,6 @@
 <h1>Brello</h1>
-<%= link_to "Add Card", new_card_path %>
-<%= link_to "Action History", actions_path %>
+<%= link_to "Add Card", new_card_path, class: "button__primary" %>
+<%= link_to "Action History", actions_path, class: "button__primary" %>
 <div class="cards">
   <%= render @cards %>
 </div>

@@ -52,4 +52,20 @@
   --color-light-grey: #aaaaaa;
   --color-extra-light-grey: #cccccc;
   --color-very-extra-light-grey: #f5f5f5;
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url(asset-path('nunito/Nunito-Regular.woff2')) format('woff2'),
+         url(asset-path('nunito/Nunito-Regular.woff')) format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nunito';
+    src: url(asset-path('nunito/Nunito-Bold.woff2')) format('woff2'),
+         url(asset-path('nunito/Nunito-Bold.woff')) format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
   }
