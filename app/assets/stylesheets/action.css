@@ -1,0 +1,17 @@
+.action-history{
+}
+
+.action-entry{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-very-extra-light-grey);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  max-height: 100%;
+  max-width: 50rem;
+}
+
+.user_email {
+  font-weight: var(--font-weight-bold);
+}

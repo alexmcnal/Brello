@@ -14,6 +14,7 @@
   padding: 1rem;
   width: 16rem;
   position: relative;
+  word-wrap: break-word;
 }
 
 .card__title {

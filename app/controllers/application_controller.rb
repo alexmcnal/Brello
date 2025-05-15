@@ -2,6 +2,12 @@ class ApplicationController < ActionController::Base
   before_action :set_current_request_details
   before_action :authenticate
 
+  helper_method :current_user
+
+  def current_user
+    Current.session&.user
+  end
+
   private
     def authenticate
       if session_record = Session.find_by_id(cookies.signed[:session_token])
