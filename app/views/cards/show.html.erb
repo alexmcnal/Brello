@@ -1,6 +1,7 @@
 <h1><%= @card.title %></h1>
 <%= link_to 'Edit Card', edit_card_path %>
 <h2><%= @card.description %></h2>
+<h3> Status: <%= @card.status %></h3>
 
 <h3>Activity</h3>
 <%= render @card.actions %>
