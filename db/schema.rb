@@ -10,15 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_08_223106) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_16_161334) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "actions", force: :cascade do |t|
+    t.string "action"
+    t.jsonb "metadata"
+    t.bigint "user_id", null: false
+    t.bigint "card_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_actions_on_card_id"
+    t.index ["user_id"], name: "index_actions_on_user_id"
+  end
 
   create_table "cards", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "todo", null: false
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -39,5 +51,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_08_223106) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "actions", "cards"
+  add_foreign_key "actions", "users"
   add_foreign_key "sessions", "users"
 end

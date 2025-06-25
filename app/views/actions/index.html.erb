@@ -1,0 +1,21 @@
+<h1>Action History</h1>
+
+<%= render @actions %>
+
+<% if @actions.any? %>
+  <div class="action-history">
+    <% @actions.each do |action| %>
+      <div class="action-entry">
+        <strong><%= action.user.email %></strong>
+        <span><%= action.action.humanize %> on <%= action.card.title %></span>
+        <p><%= action.created_at.strftime("%d %b %Y %H:%M") %></p>
+
+        <div class="changes">
+          <%= render_action_changes(action) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>No actions have been recorded yet.</p>
+<% end %>
