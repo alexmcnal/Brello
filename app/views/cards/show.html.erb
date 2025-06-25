@@ -1,8 +1,10 @@
-<h1><%= @card.title %></h1>
-<%= link_to 'Edit Card', edit_card_path %>
-<h2><%= @card.description %></h2>
-<h3> Status: <%= @card.status %></h3>
+<div class="card__background">
+  <h3> Status: <%= @card.status %></h3>
+  <%= render 'form' %>
+  <%= button_to "Delete", card_path(@card), method: :delete, class: "form__button-delete" %>
+</div>
 
-<h3>Activity</h3>
-<%= render @card.actions %>
-
+<div class="card__background">
+  <h3>Activity</h3>
+  <%= render @card.actions %>
+</div>

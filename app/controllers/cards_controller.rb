@@ -51,11 +51,11 @@ class CardsController < ApplicationController
           user: current_user,
           card: @card,
           action: "updated_card",
-          metadata: changes_metadata
+          metadata: card_changes
         )
       end
 
-      redirect_to @card, notice: "Card updated successfully"
+      redirect_to root_path, notice: "Card updated successfully"
     else
       render :edit
     end
@@ -70,6 +70,7 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:title, :description)
+    params.require(:card).permit(:title, :description, :status)
   end
+  
 end
