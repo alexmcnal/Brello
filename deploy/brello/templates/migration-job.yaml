@@ -1,0 +1,87 @@
+{{- if and .Values.migration.enabled .Values.postgresql.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Values.app.name }}-migration-{{ .Release.Revision }}
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "brello.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: migration
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "brello.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/component: migration
+    spec:
+      restartPolicy: Never
+      initContainers:
+      - name: wait-for-db
+        image: postgres:16.3
+        command:
+        - sh
+        - -c
+        - |
+          until pg_isready -h {{ .Values.postgresql.name }} -p {{ .Values.postgresql.service.port }} -U {{ .Values.postgresql.database.user }}; do
+            echo "Waiting for database to be ready..."
+            sleep 2
+          done
+          echo "Database is ready!"
+      containers:
+      - name: migration
+        image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+        imagePullPolicy: {{ .Values.app.image.pullPolicy }}
+        command: 
+        - /bin/bash
+        - -c
+        - |
+          echo "Starting database migration..."
+          bundle exec rails db:migrate
+          echo "Database migration completed successfully!"
+          {{- if .Values.migration.commands }}
+          {{- range .Values.migration.commands }}
+          echo "Running additional command: {{ . }}"
+          {{ . }}
+          {{- end }}
+          echo "All migration commands completed successfully!"
+          {{- end }}
+        env:
+        - name: RAILS_ENV
+          value: {{ .Values.app.env.railsEnv }}
+        - name: DATABASE_URL
+          value: "postgres://{{ .Values.postgresql.database.user }}:postgres@{{ .Values.postgresql.name }}:{{ .Values.postgresql.service.port }}/{{ .Values.postgresql.database.name }}"
+        - name: RAILS_MASTER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: rails-master-key
+        - name: ENCRYPT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: encrypt-secret-key
+        - name: ENCRYPT_IV
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: encrypt-iv
+        - name: ENCRYPT_SALT
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: encrypt-salt
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }} 

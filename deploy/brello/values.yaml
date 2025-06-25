@@ -84,6 +84,14 @@ postgresql:
       initialDelaySeconds: 5
       periodSeconds: 5
 
+# Migration job configuration
+migration:
+  enabled: true
+  # Additional migration commands to run (optional)
+  # commands:
+  #   - "bundle exec rails db:seed"
+  #   - "bundle exec rails db:create_admin_user"
+
 # Secrets configuration
 secrets:
   # Rails secrets (base64 encoded)

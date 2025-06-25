@@ -7,6 +7,7 @@ A Helm chart for deploying the Brello Rails application on Kubernetes.
 This Helm chart deploys a complete Brello application stack including:
 - Rails web application with configurable replicas
 - PostgreSQL database with persistent storage
+- **Database migration job** that runs automatically before deployment
 - Kubernetes secrets for sensitive configuration
 - Optional ingress for external access
 - Optional horizontal pod autoscaling
@@ -130,6 +131,13 @@ kubectl get services -l app.kubernetes.io/instance=brello
 | `ingress.className` | Ingress class name | `""` |
 | `ingress.hosts` | Ingress hosts configuration | See values.yaml |
 
+### Migration Job
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `migration.enabled` | Enable database migration job | `true` |
+| `migration.commands` | Additional commands to run after migration | `[]` |
+
 ### Autoscaling (Optional)
 
 | Parameter | Description | Default |
@@ -167,6 +175,21 @@ helm install brello deploy/brello/ -f my-values.yaml \
   --set autoscaling.enabled=true \
   --set autoscaling.minReplicas=3 \
   --set autoscaling.maxReplicas=20
+```
+
+### With Additional Migration Commands
+
+```bash
+helm install brello deploy/brello/ -f my-values.yaml \
+  --set migration.commands[0]="bundle exec rails db:seed" \
+  --set migration.commands[1]="bundle exec rails db:create_admin_user"
+```
+
+### Skip Database Migration
+
+```bash
+helm install brello deploy/brello/ -f my-values.yaml \
+  --set migration.enabled=false
 ```
 
 ### Using External Database
@@ -254,12 +277,17 @@ kubectl logs -l app=postgres -f
 2. **Rails master key missing**
    - Ensure `secrets.rails.masterKey` is set and base64 encoded
 
-3. **Database connection issues**
+3. **Database migration fails**
+   - Check migration job logs: `kubectl logs job/brello-web-migration-<revision>`
+   - Verify Rails master key is correctly set
+   - Check database connectivity
+
+4. **Database connection issues**
    - Check PostgreSQL pod is running
    - Verify database credentials
    - Check network policies
 
-4. **Application not accessible**
+5. **Application not accessible**
    - Verify service type and configuration
    - Check ingress configuration if enabled
    - Verify security groups/firewall rules
@@ -269,6 +297,10 @@ kubectl logs -l app=postgres -f
 ```bash
 # Check all resources
 kubectl get all -l app.kubernetes.io/instance=brello
+
+# Check migration job status
+kubectl get jobs -l app.kubernetes.io/component=migration
+kubectl logs job/brello-web-migration-<revision>
 
 # Describe problematic pods
 kubectl describe pod -l app=brello-web
