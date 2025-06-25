@@ -44,13 +44,22 @@ spec:
           echo "Starting database migration..."
           bundle exec rails db:migrate
           echo "Database migration completed successfully!"
+          
+          {{- if .Values.migration.seeds.enabled }}
+          echo "Running database seeds..."
+          bundle exec rails db:seed
+          echo "Database seeding completed successfully!"
+          {{- end }}
+          
           {{- if .Values.migration.commands }}
           {{- range .Values.migration.commands }}
           echo "Running additional command: {{ . }}"
           {{ . }}
           {{- end }}
-          echo "All migration commands completed successfully!"
+          echo "All additional commands completed successfully!"
           {{- end }}
+          
+          echo "All migration tasks completed successfully!"
         env:
         - name: RAILS_ENV
           value: {{ .Values.app.env.railsEnv }}

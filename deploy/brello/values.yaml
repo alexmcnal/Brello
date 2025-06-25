@@ -87,10 +87,13 @@ postgresql:
 # Migration job configuration
 migration:
   enabled: true
-  # Additional migration commands to run (optional)
+  # Run database seeds after migrations (always on install and upgrade)
+  seeds:
+    enabled: true
+  # Additional migration commands to run after seeds (optional)
   # commands:
-  #   - "bundle exec rails db:seed"
   #   - "bundle exec rails db:create_admin_user"
+  #   - "bundle exec rails cache:clear"
 
 # Secrets configuration
 secrets:

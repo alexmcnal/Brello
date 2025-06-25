@@ -7,7 +7,7 @@ A Helm chart for deploying the Brello Rails application on Kubernetes.
 This Helm chart deploys a complete Brello application stack including:
 - Rails web application with configurable replicas
 - PostgreSQL database with persistent storage
-- **Database migration job** that runs automatically before deployment
+- **Database migration and seeding job** that runs automatically on every deployment (install & upgrade)
 - Kubernetes secrets for sensitive configuration
 - Optional ingress for external access
 - Optional horizontal pod autoscaling
@@ -136,7 +136,8 @@ kubectl get services -l app.kubernetes.io/instance=brello
 | Parameter | Description | Default |
 |-----------|-------------|---------|
 | `migration.enabled` | Enable database migration job | `true` |
-| `migration.commands` | Additional commands to run after migration | `[]` |
+| `migration.seeds.enabled` | Run database seeds after migration | `true` |
+| `migration.commands` | Additional commands to run after seeds | `[]` |
 
 ### Autoscaling (Optional)
 
@@ -177,15 +178,22 @@ helm install brello deploy/brello/ -f my-values.yaml \
   --set autoscaling.maxReplicas=20
 ```
 
+### Skip Database Seeds
+
+```bash
+helm install brello deploy/brello/ -f my-values.yaml \
+  --set migration.seeds.enabled=false
+```
+
 ### With Additional Migration Commands
 
 ```bash
 helm install brello deploy/brello/ -f my-values.yaml \
-  --set migration.commands[0]="bundle exec rails db:seed" \
-  --set migration.commands[1]="bundle exec rails db:create_admin_user"
+  --set migration.commands[0]="bundle exec rails db:create_admin_user" \
+  --set migration.commands[1]="bundle exec rails cache:clear"
 ```
 
-### Skip Database Migration
+### Skip Database Migration Entirely
 
 ```bash
 helm install brello deploy/brello/ -f my-values.yaml \
@@ -277,10 +285,11 @@ kubectl logs -l app=postgres -f
 2. **Rails master key missing**
    - Ensure `secrets.rails.masterKey` is set and base64 encoded
 
-3. **Database migration fails**
+3. **Database migration or seeding fails**
    - Check migration job logs: `kubectl logs job/brello-web-migration-<revision>`
    - Verify Rails master key is correctly set
    - Check database connectivity
+   - Review seed data for errors
 
 4. **Database connection issues**
    - Check PostgreSQL pod is running
