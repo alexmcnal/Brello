@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app: {{ .Values.app.name }}
+    app.kubernetes.io/name: {{ include "brello.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: web
+spec:
+  replicas: {{ .Values.app.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+        app.kubernetes.io/name: {{ include "brello.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/component: web
+    spec:
+      containers:
+      - name: web
+        image: {{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
+        imagePullPolicy: {{ .Values.app.image.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.app.service.targetPort }}
+        env:
+        - name: RAILS_ENV
+          value: {{ .Values.app.env.railsEnv }}
+        {{- if .Values.postgresql.enabled }}
+        - name: DATABASE_URL
+          value: "postgres://{{ .Values.postgresql.database.user }}:postgres@{{ .Values.postgresql.name }}:{{ .Values.postgresql.service.port }}/{{ .Values.postgresql.database.name }}"
+        {{- end }}
+        - name: RAILS_MASTER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: rails-master-key
+        - name: ENCRYPT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: encrypt-secret-key
+        - name: ENCRYPT_IV
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: encrypt-iv
+        - name: ENCRYPT_SALT
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.app.name }}-secret
+              key: encrypt-salt
+        - name: APPLICATION_NAME
+          value: {{ .Values.app.env.applicationName }}
+        - name: DOMAIN_NAME
+          value: {{ .Values.app.env.domainName }}
+        - name: NOTIFICATION_EMAILS_SENDER
+          value: {{ .Values.app.env.notificationEmailsSender }}
+        livenessProbe:
+          httpGet:
+            path: {{ .Values.app.healthCheck.liveness.path }}
+            port: {{ .Values.app.service.targetPort }}
+          initialDelaySeconds: {{ .Values.app.healthCheck.liveness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.app.healthCheck.liveness.periodSeconds }}
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.app.healthCheck.readiness.path }}
+            port: {{ .Values.app.service.targetPort }}
+          initialDelaySeconds: {{ .Values.app.healthCheck.readiness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.app.healthCheck.readiness.periodSeconds }}
+        resources:
+          {{- toYaml .Values.app.resources | nindent 10 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }} 

@@ -1,0 +1,128 @@
+# Default values for brello
+# This is a YAML-formatted file.
+
+# Global configuration
+global:
+  namespace: brello
+
+# Application configuration
+app:
+  name: brello-web
+  replicaCount: 2
+  
+  image:
+    repository: brello
+    tag: latest
+    pullPolicy: IfNotPresent
+  
+  service:
+    type: LoadBalancer
+    port: 80
+    targetPort: 80
+  
+  # Rails application environment variables
+  env:
+    railsEnv: production
+    applicationName: "Brello"
+    domainName: "brello.example.com"
+    notificationEmailsSender: "notifications@brello.example.com"
+  
+  # Resource limits and requests
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "1Gi"
+      cpu: "500m"
+  
+  # Health check configuration
+  healthCheck:
+    liveness:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      path: /
+    readiness:
+      initialDelaySeconds: 5
+      periodSeconds: 5
+      path: /
+
+# PostgreSQL configuration
+postgresql:
+  enabled: true
+  name: postgres
+  
+  image:
+    repository: postgres
+    tag: "16.3"
+    pullPolicy: IfNotPresent
+  
+  service:
+    type: ClusterIP
+    port: 5432
+  
+  # Database configuration
+  database:
+    name: brello_production
+    user: postgres
+    # Password will be generated automatically or can be set
+    # password: ""
+  
+  # Storage configuration
+  persistence:
+    enabled: true
+    size: 10Gi
+    storageClass: ""
+    accessMode: ReadWriteOnce
+  
+  # Health check configuration
+  healthCheck:
+    liveness:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+    readiness:
+      initialDelaySeconds: 5
+      periodSeconds: 5
+
+# Secrets configuration
+secrets:
+  # Rails secrets (base64 encoded)
+  rails:
+    masterKey: ""  # Add your base64 encoded Rails master key here
+    encryptSecretKey: "UVJEVUdMKzZCbEthcnQ4L1U0bzJrTWlIcFBnQW9OckVJUFgxS0tWYVIxYz0="
+    encryptIv: "Z3dZRTQyTzA2U3JpR1BlWA=="
+    encryptSalt: "UDJIdUtIQU9IenFLNmtIbjkrUHkvOFF0MkU5UTFyTW9qaGIyWjI3VWwxNUw1REt6SXdENGFFbFlpejF4aHFiK1pkaWZZaVZya2ZmZ25RbmZheEhCY3JOelM3a1VRSGJCdFBoUkdnQ1RPZHNOUXpQaEJyVnZBVWU5TXM1QjZiRklGTDFEZFRjekpFdE9yOHMxM3M2Z2NLbkpIZEVQNVQ3bHNuMTQyMWhtMzVZPQ=="
+  
+  # PostgreSQL secrets
+  postgresql:
+    password: "cG9zdGdyZXM="  # base64 encoded "postgres"
+
+# Ingress configuration (optional)
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: brello.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+  #  - secretName: brello-tls
+  #    hosts:
+  #      - brello.local
+
+# Autoscaling configuration (optional)
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+
+# Node selector and tolerations
+nodeSelector: {}
+tolerations: []
+affinity: {} 
