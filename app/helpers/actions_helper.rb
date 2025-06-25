@@ -10,7 +10,7 @@ module ActionsHelper
     else
       safe_join(action.metadata.map do |field, change|
         content_tag(:div, class: "change") do
-          "<strong>#{field.capitalize}:</strong> From: \"#{change['from']}\" → To: \"#{change['to']}\"".html_safe
+          "<strong>#{field.capitalize}:</strong> From: \"#{change.first}\" → To: \"#{change.last}\"".html_safe
         end
       end)
     end
