@@ -1,0 +1,14 @@
+<div class="action">
+  <span class="user_email"><%= action.user_email -%></span>
+
+  Updated
+  <% action.metadata.each do |column_name, changes| %>
+    <div class="action__changes">
+      <span class="column_name"><%= column_name %></span>
+      from
+      <span class="column_data"><%= changes.first %></span>
+      to
+      <span class="column_data"><%= changes.last %></span>
+    </div>
+  <% end %>
+</div>

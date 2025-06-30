@@ -55,6 +55,7 @@ group :development, :test do
   gem "capybara"
   # gem "selenium-webdriver"
   gem 'cuprite'
+  gem "pry-byebug", "~> 3.11"
 end
 
 group :development do
@@ -72,3 +73,4 @@ gem "simple_form", "~> 5.3"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
+

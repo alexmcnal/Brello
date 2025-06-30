@@ -1,5 +1,15 @@
-<h1>Brello</h1>
-<%= link_to "Add Card", new_card_path %>
-<div class="cards">
-  <%= render @cards %>
+<div class="toolbar">
+  <h1>Brello</h1>
+  <%= link_to "Add Card", new_card_path, class: "button__primary" %>
+</div>
+
+<div class="board">
+  <% @cards_by_status.each do |status, cards| %>
+    <div class="board__column">
+      <h2 class="board__column-title"><%= status.titleize %></h2>
+      <% cards.each do |card| %>
+        <%= render card %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
