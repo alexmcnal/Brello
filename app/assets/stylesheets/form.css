@@ -17,12 +17,20 @@
   font-size: 1rem;
   background-color: #f9f9f9;
   transition: border 0.2s ease;
+  resize: none;
+  flex: 1;
+  box-sizing: border-box;
 }
 
 .form__input:focus {
   border-color: #007aff;
   background-color: white;
   outline: none;
+}
+
+.form__input--description{
+  height: 300px;
+  resize: none;
 }
 
 .form__actions {
@@ -38,7 +46,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  padding-top: 1rem;
+  margin-top: 1rem;
 }
   
 .form__button:hover {
@@ -69,14 +77,11 @@
   background-position: right 1rem center;
   background-size: 12px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .form__dropdown:focus {
   border-color: #007aff;
   box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
   outline: none;
-}
-
-
-
-  
+} 

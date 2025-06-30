@@ -6,15 +6,15 @@
   </div>
 
   <div class="form__field">
-    <%= form.input :description, input_html: { class: "form__input" }, label_html: { class: "form__label" } %>
+    <%= form.input :description, input_html: { class: "form__input form__input--description" }, label_html: { class: "form__label" } %>
   </div>
 
   <div class="form__dropdown">
     <%= form.input :status,
       collection: Card::STATUSES.map { |s| [s.humanize, s] },
       prompt: "Select status",
-      input_html: { class: "form-input" },
-      label_html: { class: "form-label" } %>
+      input_html: { class: "form__input" },
+      label_html: { class: "form__label" } %>
   </div>
 
   <div class="form__actions">

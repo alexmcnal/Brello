@@ -1,0 +1,17 @@
+.board{
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+
+.board__column{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.board__column-title{
+  margin: 0 0 1rem;
+}
