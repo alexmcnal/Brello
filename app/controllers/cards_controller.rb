@@ -25,7 +25,7 @@ class CardsController < ApplicationController
         user: current_user,
         card: @card,
         action: "created_card",
-        metadata:{
+        metadata: {
           title: @card.title,
           description: @card.description
         }
@@ -64,7 +64,7 @@ class CardsController < ApplicationController
   def destroy
     @card = Card.find(params[:id])
     @card.destroy
-    redirect_to cards_path, notice: 'Card deleted'
+    redirect_to cards_path, notice: "Card deleted"
   end
 
   private
@@ -72,5 +72,4 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:title, :description, :status)
   end
-  
 end

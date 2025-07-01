@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Manage Cards', type: :feature, js: true do
-
   scenario 'index page show all cards' do
     Card.create!(title: 'Test Card', description: 'This is a test card')
 
@@ -113,5 +112,4 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
       expect(page).not_to have_content('This is a new card'), 'Card description has not adhered to changed params'
     end
   end
-
 end

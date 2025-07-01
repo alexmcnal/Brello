@@ -34,10 +34,10 @@ Capybara.register_driver(:cuprite) do |app|
       'no-sandbox':                  nil,
       'disable-gpu':                 nil,
       'disable-software-rasterizer': nil,
-      'disable-dev-shm-usage':       nil,
+      'disable-dev-shm-usage':       nil
     },
     process_timeout: 2,
-    window_size: [1200, 800],
+    window_size: [ 1200, 800 ],
     xvfb: !running_vnc,
     headless: !running_vnc
   )
