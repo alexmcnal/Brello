@@ -34,3 +34,6 @@ directories:
       enabled: false
     TooManyStatements:
       enabled: false
+
+exclude_paths:
+  - "test"
