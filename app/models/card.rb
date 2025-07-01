@@ -1,6 +1,5 @@
 class Card < ApplicationRecord
-
-  STATUSES = ["todo", "in_progress", "done"]
+  STATUSES = [ "todo", "in_progress", "done" ]
 
   has_many :actions
 
