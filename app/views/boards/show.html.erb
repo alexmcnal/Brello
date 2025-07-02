@@ -1,0 +1,31 @@
+<h1><%= @board.title %></h1>
+<div class="columns" style="display: flex; gap: 1rem;">
+  <% @columns.each do |column| %>
+    <div class="column" style="width: 250px; padding: 1rem; background: #f5f5f5;">
+      <h3><%= column.title %></h3>
+
+      <div data-controller="drag" data-drag-column-id-value="<%= column.id %>">
+        <% column.cards.each do |card| %>
+          <div class="card" data-drag-id-value="<%= card.id %>">
+            <strong><%= card.title %></strong><br>
+            <%= card.description %>
+          </div>
+        <% end %>
+      </div>
+
+      <%= form_with model: Card.new, url: column_cards_path(column), local: true do |f| %>
+        <%= f.text_field :title, placeholder: "Card title" %><br>
+        <%= f.text_area :description, placeholder: "Card description" %><br>
+        <%= f.submit "Add Card" %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <!-- New Column Form -->
+  <div class="column new-column" style="padding: 1rem;">
+    <%= form_with model: @new_column, url: board_columns_path(@board), local: true do |f| %>
+      <%= f.text_field :title, placeholder: "New Column" %>
+      <%= f.submit "Add Column" %>
+    <% end %>
+  </div>
+</div>
