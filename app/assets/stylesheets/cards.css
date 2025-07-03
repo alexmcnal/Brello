@@ -61,3 +61,20 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
+
+.card-container {
+  min-height: 100px; /* ensure it has room even when empty */
+  padding: 0.5rem;
+  background: #f8f8f8;
+  border: 2px dashed #ccc;
+  transition: background 0.2s ease-in-out;
+}
+
+.card-container:empty::before {
+  content: "Drop cards here";
+  color: #999;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}

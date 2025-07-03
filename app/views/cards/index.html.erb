@@ -3,13 +3,15 @@
   <%= link_to "Add Card", new_card_path, class: "button__primary" %>
 </div>
 
-<div class="board">
+<div class="board" data-controller="drag">
   <% @cards_by_status.each do |status, cards| %>
-    <div class="board__column">
+    <div class="board__column" data-column-id="<%= status %>">
       <h2 class="board__column-title"><%= status.titleize %></h2>
-      <% cards.each do |card| %>
-        <%= render card %>
-      <% end %>
+      <div class="card-container">
+        <% cards.each do |card| %>
+          <%= render card %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
