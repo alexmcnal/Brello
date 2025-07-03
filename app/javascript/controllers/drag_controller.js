@@ -1,11 +1,14 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
+
+  static targets = ["form", "status"];
+
   connect() {
     const Sortable = window.Draggable.Sortable;
 
     this.sortable = new Sortable(
-      this.element.querySelectorAll(".board__column"), // use board__column as containers
+      this.element.querySelectorAll(".card-container"), // use board__column as containers
       {
         draggable: ".card", // draggable cards inside columns
         mirror: {
@@ -15,7 +18,7 @@ export default class extends Controller {
     );
 
     this.sortable.on('mirror:create', (event) => {
-      event.mirror.classList.add('card--mirror'); // style mirror
+      // event.mirror.classList.add('card--mirror'); // style mirror
     });
 
     this.sortable.on('drag:start', (event) => {
@@ -38,6 +41,33 @@ export default class extends Controller {
 
       if (sibling && parent) {
         parent.insertBefore(indicator, sibling);
+      }
+    });
+
+    this.sortable.on('sortable:stop', (event) => {
+      const { newContainer, newIndex, oldContainer, oldIndex } = event;
+      
+      if (newContainer === oldContainer && newIndex === oldIndex) {
+        return; // No change in position
+      }
+
+      if (this.hasFormTarget) {
+        const cardId = event.data.dragEvent.data.source.dataset.cardId;
+        this.formTarget.action = `/cards/${cardId}`;        
+        this.statusTarget.value = event.data.newContainer.dataset.columnId;
+        
+        // Ensure CSRF token is included in the form
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+        let csrfInput = this.formTarget.querySelector('input[name="authenticity_token"]');
+        if (!csrfInput) {
+          csrfInput = document.createElement('input');
+          csrfInput.type = 'hidden';
+          csrfInput.name = 'authenticity_token';
+          this.formTarget.appendChild(csrfInput);
+        }
+        csrfInput.value = csrfToken;
+        
+        this.formTarget.submit();
       }
     });
   }

@@ -102,3 +102,7 @@
   border-radius: 2px;
   transition: all 0.1s ease;
 }
+
+.card-container {
+  height: 100%;
+}
