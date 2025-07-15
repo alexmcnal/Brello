@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
   
   def index
-    @cards_by_status = Card.by_status
+    @cards_by_status = Card.order(:status, :position).group_by(&:status)
   end
 
   def new
