@@ -46,17 +46,29 @@ export default class extends Controller {
 
     this.sortable.on('sortable:stop', (event) => {
       const { newContainer, newIndex, oldContainer, oldIndex } = event;
-      
+
       if (newContainer === oldContainer && newIndex === oldIndex) {
-        return; // No change in position
+        return;
       }
 
       if (this.hasFormTarget) {
         const cardId = event.data.dragEvent.data.source.dataset.cardId;
-        this.formTarget.action = `/cards/${cardId}`;        
-        this.statusTarget.value = event.data.newContainer.dataset.columnId;
+        this.formTarget.action = `/cards/${cardId}`;
         
-        // Ensure CSRF token is included in the form
+        // Update hidden fields for status and position
+        this.statusTarget.value = newContainer.dataset.columnId;
+
+        // Add a hidden input for position if it doesn't exist
+        let positionInput = this.formTarget.querySelector('input[name="position"]');
+        if (!positionInput) {
+          positionInput = document.createElement('input');
+          positionInput.type = 'hidden';
+          positionInput.name = 'position';
+          this.formTarget.appendChild(positionInput);
+        }
+        positionInput.value = newIndex + 1; // acts_as_list is 1-based
+
+        // CSRF setup
         const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
         let csrfInput = this.formTarget.querySelector('input[name="authenticity_token"]');
         if (!csrfInput) {
@@ -66,7 +78,7 @@ export default class extends Controller {
           this.formTarget.appendChild(csrfInput);
         }
         csrfInput.value = csrfToken;
-        
+
         this.formTarget.submit();
       }
     });

@@ -14,7 +14,7 @@
     <div class="board__column">
       <h2 class="board__column-title"><%= status.titleize %></h2>
       <div class="card-container" data-column-id="<%= status %>">
-        <% cards.each do |card| %>
+        <% cards.sort_by(&:position).each do |card| %>
           <%= render card %>
         <% end %>
       </div>

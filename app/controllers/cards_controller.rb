@@ -47,6 +47,10 @@ class CardsController < ApplicationController
     card_changes = @card.changes
 
     if @card.save
+      if params[:position].present?
+        @card.insert_at(params[:position].to_i)
+      end
+
       if card_changes.any?
         Action.create!(
           user: current_user,
