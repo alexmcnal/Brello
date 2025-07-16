@@ -1,24 +1,12 @@
 <%= simple_form_for @card do |form| %>
   <%= yield %>
 
-  <div class="form__field">
-    <%= form.input :title, input_html: { class: "form__input" }, label_html: { class: "form__label" } %>
-  </div>
-
-  <div class="form__field">
-    <%= form.input :description, input_html: { class: "form__input form__input--description" }, label_html: { class: "form__label" } %>
-  </div>
-
-  <div class="form__dropdown">
-    <%= form.input :status,
-      collection: Card::STATUSES.map { |s| [s.humanize, s] },
-      prompt: "Select status",
-      input_html: { class: "form__input" },
-      label_html: { class: "form__label" } %>
-  </div>
-
-  <div class="form__actions">
-    <%= form.button :submit, "Save Card", class: "form__button" %>
-  </div>
+  <%= form.input :title %>
+  <%= form.input :description %>
+  <%= form.input :status, 
+    collection: Card::STATUSES.map { |s| [s.humanize, s] },
+    prompt: "Select status" %>
+  <%= form.button :submit, "Save Card" %>
   
 <% end %>
+
