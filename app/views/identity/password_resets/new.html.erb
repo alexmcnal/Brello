@@ -1,14 +1,19 @@
-<p style="color: red"><%= alert %></p>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <p style="color: red"><%= alert %></p>
 
-<h1>Forgot your password?</h1>
+  <h1>Forgot your password?</h1>
 
-<%= form_with(url: identity_password_reset_path) do |form| %>
+  <%= simple_form_for :user, url: identity_password_reset_path do |form| %>
+    <%= form.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" } %>
+    
+    <%= form.submit "Send password reset email", class: "form__button" %>
+  <% end %>
+
+  <br>
+
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.email_field :email, required: true, autofocus: true %>
+    <%= link_to "Sign in", sign_in_path %> |
+    <%= link_to "Sign up", sign_up_path %>
   </div>
-
-  <div>
-    <%= form.submit "Send password reset email" %>
-  </div>
-<% end %>
+</div>
