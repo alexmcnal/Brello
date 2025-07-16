@@ -18,6 +18,7 @@
   word-wrap: break-word;
   box-sizing: border-box;
   margin-bottom: 1rem;
+  z-index: 0;
 }
 
 .card__title {
@@ -60,4 +61,48 @@
   border-radius: 12px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.insertion-indicator {
+  height: 0;
+  border-top: 4px double #4a90e2;
+  margin: 6px 0;
+  position: relative;
+}
+
+.card--mirror {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0.85;
+  border-radius: 8px;
+  pointer-events: none; /* So you can still interact with underlying elements */
+  z-index: 9999;
+  user-select: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  background-color: green;
+}
+
+.card--dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+
+.card--placeholder {
+  border: 2px dashed #4a90e2;
+  background-color: #eaf3ff;
+  min-height: 50px;
+  margin: 8px 0;
+  border-radius: 6px;
+}
+
+.drop-indicator {
+  height: 4px;
+  background-color: #4a90e2;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.1s ease;
+}
+
+.card-container {
+  height: 100%;
 }

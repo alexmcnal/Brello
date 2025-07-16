@@ -3,13 +3,28 @@
   <%= link_to "Add Card", new_card_path, class: "button__primary" %>
 </div>
 
-<div class="board">
+
+
+<div class="board" data-controller="drag">
+  <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
+    <%= form.text_field :status, data: { drag_target: 'status' } %>
+    <%= form.submit "Update Card" %>
+  <% end %>
   <% @cards_by_status.each do |status, cards| %>
     <div class="board__column">
       <h2 class="board__column-title"><%= status.titleize %></h2>
-      <% cards.each do |card| %>
-        <%= render card %>
-      <% end %>
+      <div class="card-container" data-column-id="<%= status %>">
+        <% cards.each do |card| %>
+          <%= render card %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
+
+<div>
+  <input type="text">
+	<button>Greet</button>
+</div>
+
+

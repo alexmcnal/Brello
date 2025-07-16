@@ -1,6 +1,7 @@
 class CardsController < ApplicationController
+  
   def index
-    @cards_by_status = Card.by_status
+    @cards_by_status = Card.order(:status, :position).group_by(&:status)
   end
 
   def new
@@ -46,6 +47,10 @@ class CardsController < ApplicationController
     card_changes = @card.changes
 
     if @card.save
+      if params[:position].present?
+        @card.insert_at(params[:position].to_i)
+      end
+
       if card_changes.any?
         Action.create!(
           user: current_user,
