@@ -6,7 +6,7 @@ class Card < ApplicationRecord
   has_many :actions
 
   def self.by_status
-    cards_by_status = all.group_by(&:status)
+    cards_by_status = all.order(:status, :position).group_by(&:status)
 
     cards_by_ordered_status = {}
 
