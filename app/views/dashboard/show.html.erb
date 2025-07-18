@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+<%= link_to "New Project", new_project_path %>
+
+<div class="project">
+  <% @projects.each do |project| %>
+    <div>
+      <div>
+        <%= project.name %>
+        <%= link_to "Edit Project", edit_project_path(project) %>
+      </div>
+      <%= project.description %>    
+    <div>
+  <% end %>
+</div>
