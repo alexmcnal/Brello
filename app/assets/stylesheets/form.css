@@ -85,3 +85,49 @@
   box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
   outline: none;
 } 
+
+/* Error states for SimpleForm */
+.field_with_errors .form__input,
+.form__input.is-invalid {
+  border-color: #ff3b30;
+  background-color: #fff5f5;
+}
+
+.field_with_errors .form__input:focus,
+.form__input.is-invalid:focus {
+  border-color: #ff3b30;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.15);
+  outline: none;
+}
+
+.field_with_errors .form__dropdown,
+.form__dropdown.is-invalid {
+  border-color: #ff3b30;
+  background-color: #fff5f5;
+}
+
+.error {
+  display: block;
+  color: #ff3b30;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.field_with_errors .form__label {
+  color: #ff3b30;
+}
+
+/* Success states */
+.field_without_errors .form__input,
+.form__input.is-valid {
+  border-color: #34c759;
+  background-color: #f0fff4;
+}
+
+.hint {
+  display: block;
+  color: #666;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+} 

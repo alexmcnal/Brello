@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to root_path, notice: "Project Created"
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
     if @project.update(project_params)
       redirect_to root_path, notice: "Project Updated"
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
