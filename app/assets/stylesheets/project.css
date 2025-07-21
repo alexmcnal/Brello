@@ -1,7 +1,39 @@
-.project {
-  background-color: green;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  padding: 1rem;
-  width: 25%;
+.project-card {
+  background-color: #e6f0fa;      /* Light blue-gray, not yellow */
+  border: 1px solid #b3cce6;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 800px;
+  min-height: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #334d66;
+}
+
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* make the whole card clickable */
+}
+
+.project-card-link:hover .project-card {
+  /* example hover effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
