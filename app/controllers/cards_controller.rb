@@ -60,7 +60,7 @@ class CardsController < ApplicationController
         )
       end
 
-      redirect_to root_path, notice: "Card updated successfully"
+      redirect_to cards_path, notice: "Card updated successfully"
     else
       render :edit
     end
