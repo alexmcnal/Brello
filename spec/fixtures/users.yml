@@ -2,3 +2,4 @@ admin_user:
   email: admin@example.com
   password_digest: <%= BCrypt::Password.create("password1234") %>
   verified: true
+  
