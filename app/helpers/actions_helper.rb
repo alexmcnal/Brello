@@ -18,6 +18,6 @@ module ActionsHelper
 
   def render_action(action)
     partial_name = "actions/action_#{action.action}"
-    render partial_name, action:
+    render(partial_name, action:)
   end
 end

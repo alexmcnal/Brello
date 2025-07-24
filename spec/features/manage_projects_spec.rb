@@ -20,7 +20,7 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
     scenario 'new project is created once the forms parameters are successfully met' do
       visit root_path
-      
+
       click_on "New Project"
       expect(page).not_to have_content("Dashboard"), "Still on project index page"
       expect(page).to have_css('.form__button'), "Form button not found"
@@ -36,7 +36,7 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
     scenario 'edited projects adhere to changes' do
       visit root_path
-      
+
       click_on "New Project"
       expect(page).not_to have_content("Dashboard"), "Still on project index page"
       expect(page).to have_css('.form__button'), "Form button not found"
@@ -65,5 +65,4 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
       expect(page).to have_content("New Project Description Edited"), "Project description has not adhered to changed params"
     end
   end
-
 end
