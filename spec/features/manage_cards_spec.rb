@@ -8,7 +8,6 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
   end
 
   scenario 'index page show all cards' do
-
     Card.create!(title: 'Test Card', description: 'This is a test card')
 
     visit cards_path

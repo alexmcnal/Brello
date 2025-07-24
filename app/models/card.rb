@@ -1,7 +1,7 @@
 class Card < ApplicationRecord
   STATUSES = [ "todo", "in_progress", "done" ]
 
-  acts_as_list scope: [:status]
+  acts_as_list scope: [ :status ]
 
   has_many :actions
 

@@ -1,5 +1,4 @@
-class ProjectsController < ApplicationController 
-  
+class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
   end
@@ -35,5 +34,4 @@ class ProjectsController < ApplicationController
   def project_params
     params.require(:project).permit(:name, :description)
   end
-
 end
