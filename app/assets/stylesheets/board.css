@@ -4,6 +4,38 @@
   gap: 1.2rem;
 }
 
+.board-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+  width: 24rem;
+  height: 12rem;
+}
+
+.board-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.board-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.board-name:hover {
+  text-decoration: underline;
+}
+
+.board--description {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
 .board__column{
   display: flex;
   flex-direction: column;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_18_092934) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_24_094500) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -23,6 +23,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_18_092934) do
     t.datetime "updated_at", null: false
     t.index ["card_id"], name: "index_actions_on_card_id"
     t.index ["user_id"], name: "index_actions_on_user_id"
+  end
+
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_boards_on_project_id"
   end
 
   create_table "cards", force: :cascade do |t|
@@ -61,5 +70,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_18_092934) do
 
   add_foreign_key "actions", "cards"
   add_foreign_key "actions", "users"
+  add_foreign_key "boards", "projects"
   add_foreign_key "sessions", "users"
 end
