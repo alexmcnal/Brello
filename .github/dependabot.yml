@@ -5,6 +5,13 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  enable-beta-ecosystems: true
+  pull-request-branch-name:
+    separator: "/"
+  auto-merge:
+    enable: true
+    strategy: "merge"
+    dependency-type: "all"
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
