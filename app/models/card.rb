@@ -1,6 +1,8 @@
 class Card < ApplicationRecord
   STATUSES = [ "todo", "in_progress", "done" ]
 
+  validates :title, presence: true
+
   acts_as_list scope: [ :status ]
 
   has_many :actions
