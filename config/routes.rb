@@ -24,8 +24,9 @@ Rails.application.routes.draw do
   root "dashboard#show"
 
   resource :dashboard, only: [ :show ]
-  resources :projects
-
+  resources :projects do
+    resources :boards
+  end
   resources :actions, only: [ :index ]
 
   resources :cards

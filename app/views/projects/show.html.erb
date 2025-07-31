@@ -1,4 +1,14 @@
-<h1> Show Page</h1>
 <h2><%= @project.name %></h2>
 
 <%= link_to "Edit Project", edit_project_path(@project.id) %>
+
+<%= link_to "New Board", new_project_board_path(@project) %>
+
+<% @boards.each do |board| %>
+  <%= link_to project_board_path(@project, board), class: "project-card-link" do %>
+    <div class="board-card">
+      <div><%= board.name %></div>
+      <div><%= board.description %></div>
+    </div>
+  <% end %>
+<% end %>
