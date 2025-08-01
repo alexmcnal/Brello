@@ -7,7 +7,7 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
     sign_in
   end
 
-  scenario 'Newly created column shows on project show page' do
+  scenario 'newly created column shows on project show page' do
     visit root_path
 
     click_on 'project one'
@@ -50,10 +50,8 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
 
     click_on 'Save Column'
 
-    expect(page).to have_content('Newly created column EDITED'), "column name not adhered to changed parameters"
-    expect(page).to have_content('Newly created column description EDITED'), "column description not adhered to changed parameters"
-
-    # This should check that the column is on the project show page
+    expect(page).to have_content('Newly created column EDITED'), "column name not changed when edited"
+    expect(page).to have_content('Newly created column description EDITED'), "column description not changed when edited"
 
   end
 end
