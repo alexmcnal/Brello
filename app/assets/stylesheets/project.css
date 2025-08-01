@@ -30,6 +30,7 @@
   text-decoration: none;
   color: inherit;
   display: block; /* make the whole card clickable */
+  width: fit-content;
 }
 
 .project-card-link:hover .project-card {

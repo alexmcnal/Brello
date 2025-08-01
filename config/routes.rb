@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resource :dashboard, only: [ :show ]
   resources :projects do
     resources :boards
+    resources :columns
   end
   resources :actions, only: [ :index ]
 

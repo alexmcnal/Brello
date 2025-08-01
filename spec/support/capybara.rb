@@ -51,5 +51,5 @@ Capybara.configure do |config|
   config.javascript_driver = :cuprite
   config.server = :puma, { Silent: true }
   config.match = :prefer_exact
-  config.default_max_wait_time = 20
+  config.default_max_wait_time = 2
 end

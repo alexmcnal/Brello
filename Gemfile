@@ -53,6 +53,7 @@ group :development, :test do
   gem "guard-rails", "~> 0.8.1"
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem "shoulda", "~> 4.0"
   # gem "selenium-webdriver"
   gem "cuprite"
   gem "pry-byebug", "~> 3.11"
@@ -76,3 +77,5 @@ gem "simple_form", "~> 5.3"
 gem "bcrypt", "~> 3.1.7"
 
 gem "acts_as_list"
+
+

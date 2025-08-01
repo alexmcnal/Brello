@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @boards = @project.boards
+    @columns = @project.columns
   end
 
   def new
