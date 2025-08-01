@@ -7,7 +7,7 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
     sign_in
   end
 
-  scenario 'New column adheres to provided parameters' do
+  scenario 'Newly created column shows on project show page' do
     visit root_path
 
     click_on 'project one'
@@ -27,7 +27,7 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
 
   end
 
-  scenario 'column adheres to changed parameters' do
+  scenario 'column values change when edited' do
     visit root_path
 
     click_on 'project one'
