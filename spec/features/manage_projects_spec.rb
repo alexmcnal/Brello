@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Manage Cards', type: :feature, js: true do
+RSpec.describe 'Manage Projects', type: :feature, js: true do
   fixtures :all
 
   before do
