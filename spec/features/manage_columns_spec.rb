@@ -11,20 +11,17 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
     visit root_path
 
     click_on 'project one'
-    expect(page).to have_content('New Column')
+    expect(page).to have_content('New Column'), 'Expected link to new column to be on the project show page, but was not found'
 
     click_on 'New Column'
 
-    fill_in "Name", with: "Newly created column"
-    fill_in "Description", with: "Newly created column description"
+    fill_in "Name", with: "In Progress"
+    fill_in "Description", with: "In Progress description"
 
     click_on 'Save Column'
 
-    expect(page).to have_content('Newly created column')
-    expect(page).to have_content('Newly created column description')
-
-    # This should check that the column is on the project show page
-
+    expect(page).to have_content('In Progress'), 'Expected new column to be on the project show page'
+    expect(page).to have_content('In Progress description'), 'Expected new column description to be on the project show page'
   end
 
   scenario 'column values change when edited' do
@@ -35,7 +32,7 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
 
     click_on 'New Column'
 
-    fill_in "Name", with: "Newly created column"
+    fill_in "Name", with: "In Progress"
     fill_in "Description", with: "Newly created column description"
 
     click_on 'Save Column'
@@ -43,15 +40,14 @@ RSpec.describe 'Manage Columns', type: :feature, js: true do
     expect(page).to have_content('Newly created column')
     expect(page).to have_content('Newly created column description')
 
-    click_on 'Newly created column'
+    click_on 'In Progress'
 
-    fill_in "Name", with: "Newly created column EDITED"
-    fill_in "Description", with: "Newly created column description EDITED"
+    fill_in "Name", with: "In Progress EDITED"
+    fill_in "Description", with: "In Progress description EDITED"
 
     click_on 'Save Column'
 
-    expect(page).to have_content('Newly created column EDITED'), "column name not changed when edited"
-    expect(page).to have_content('Newly created column description EDITED'), "column description not changed when edited"
-
+    expect(page).to have_content('In Progress EDITED'), "Expected column name to be changed when edited, but was not"
+    expect(page).to have_content('In Progress description EDITED'), "Expected column description to be changed when edited, but was not"
   end
 end
