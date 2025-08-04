@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_31_110505) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_04_084730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -23,6 +23,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_31_110505) do
     t.datetime "updated_at", null: false
     t.index ["card_id"], name: "index_actions_on_card_id"
     t.index ["user_id"], name: "index_actions_on_user_id"
+  end
+
+  create_table "board_columns", force: :cascade do |t|
+    t.bigint "board_id", null: false
+    t.bigint "column_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_board_columns_on_board_id"
+    t.index ["column_id"], name: "index_board_columns_on_column_id"
   end
 
   create_table "boards", force: :cascade do |t|
@@ -41,6 +50,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_31_110505) do
     t.datetime "updated_at", null: false
     t.string "status", default: "todo", null: false
     t.integer "position"
+    t.bigint "column_id", null: false
+    t.index ["column_id"], name: "index_cards_on_column_id"
   end
 
   create_table "columns", force: :cascade do |t|
@@ -79,7 +90,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_31_110505) do
 
   add_foreign_key "actions", "cards"
   add_foreign_key "actions", "users"
+  add_foreign_key "board_columns", "boards"
+  add_foreign_key "board_columns", "columns"
   add_foreign_key "boards", "projects"
+  add_foreign_key "cards", "columns"
   add_foreign_key "columns", "projects"
   add_foreign_key "sessions", "users"
 end

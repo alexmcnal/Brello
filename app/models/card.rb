@@ -6,7 +6,8 @@ class Card < ApplicationRecord
   acts_as_list scope: [ :status ]
 
   has_many :actions
-
+  belongs_to :column
+  
   def self.by_status
     cards_by_status = all.order(:status, :position).group_by(&:status)
 

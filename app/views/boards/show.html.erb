@@ -2,3 +2,29 @@
 <h2><%= @board.name%></h2>
 <h3><%= @board.description%></h3>
 <%= link_to "Edit Board", edit_project_board_path(@project, @board) %>
+
+<div class="toolbar">
+  <h1>Brello</h1>
+  <%= link_to "Add Card", new_card_path, class: "button__primary" %>
+</div>
+
+
+
+<div class="board" data-controller="drag">
+  <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
+    <%= form.text_field :status, data: { drag_target: 'status' } %>
+    <%= form.submit "Update Card" %>
+  <% end %>
+  <% @cards_by_status.each do |status, cards| %>
+    <div class="board__column">
+      <h2 class="board__column-title"><%= status.titleize %></h2>
+      <div class="card-container" data-column-id="<%= status %>">
+        <% cards.each do |card| %>
+          <%= render card %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
