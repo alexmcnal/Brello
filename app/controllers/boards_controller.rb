@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
   def show
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:id])
-    @cards_by_status = []
+    @columns = @project.columns
   end
   
   def new

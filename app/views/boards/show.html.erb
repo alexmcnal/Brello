@@ -12,14 +12,15 @@
 
 <div class="board" data-controller="drag">
   <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
-    <%= form.text_field :status, data: { drag_target: 'status' } %>
+    <%= form.text_field :column_id, data: { drag_target: 'status' } %>
+    <%= hidden_field_tag :board_id, @board.id %>
     <%= form.submit "Update Card" %>
   <% end %>
-  <% @cards_by_status.each do |status, cards| %>
+  <% @columns.each do |column| %>
     <div class="board__column">
-      <h2 class="board__column-title"><%= status.titleize %></h2>
-      <div class="card-container" data-column-id="<%= status %>">
-        <% cards.each do |card| %>
+      <h2 class="board__column-title"><%= column.name.titleize %></h2>
+      <div class="card-container" data-column-id="<%= column.id %>">
+        <% column.cards.by_position.each do |card| %>
           <%= render card %>
         <% end %>
       </div>

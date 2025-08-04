@@ -3,11 +3,13 @@ class Card < ApplicationRecord
 
   validates :title, presence: true
 
-  acts_as_list scope: [ :status ]
+  acts_as_list scope: [ :column_id ]
 
   has_many :actions
   belongs_to :column
   
+  scope :by_position, -> { order(position: :asc) }
+
   def self.by_status
     cards_by_status = all.order(:status, :position).group_by(&:status)
 

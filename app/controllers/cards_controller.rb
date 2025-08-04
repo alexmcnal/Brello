@@ -37,6 +37,8 @@ class CardsController < ApplicationController
   end
 
   def update
+    @board = Board.find(params[:board_id])
+    @project = @board.project
     @card = Card.find(params[:id])
 
     current_title = @card.title
@@ -59,7 +61,7 @@ class CardsController < ApplicationController
         )
       end
 
-      redirect_to cards_path, notice: "Card updated successfully"
+      redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
     else
       render :edit
     end
@@ -74,6 +76,6 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:title, :description, :status)
+    params.require(:card).permit(:title, :description, :column_id)
   end
 end
