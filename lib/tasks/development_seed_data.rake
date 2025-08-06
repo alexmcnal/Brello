@@ -16,8 +16,8 @@ namespace :development do
       in_progress_column = project.columns.where(name: "In Progress", description: "In Progress").first_or_create!
       done_column = project.columns.where(name: "Done", description: "Done").first_or_create!
 
-      board.board_columns.where(column: todo_column).first_or_create!
-      board.board_columns.where(column: in_progress_column).first_or_create!
+    board.board_columns.where(column: todo_column).first_or_create!
+    board.board_columns.where(column: in_progress_column).first_or_create!
       board.board_columns.where(column: done_column).first_or_create!
 
       10.times do |i|

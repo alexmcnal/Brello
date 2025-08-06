@@ -1,5 +1,5 @@
 <div class="card" data-card-id="<%= card.id %>">
-  <%= link_to card_path(card), class: 'card__title', data: { turbo: false } do %>
+  <%= link_to project_board_card_path(@project, @board, card), class: 'card__title', data: { turbo: false } do %>
     <%= card.title %>
   <% end %>
   <div class="card__description">

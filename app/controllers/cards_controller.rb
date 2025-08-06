@@ -8,9 +8,11 @@ class CardsController < ApplicationController
   end
 
   def show
+    @board = Board.find(params[:board_id])
+    @project = @board.project
     @card = Card.find(params[:id])
   rescue ActiveRecord::RecordNotFound
-    redirect_to cards_path
+    redirect_to project_board_cards_path(@project, @board)
   end
 
   def edit
@@ -18,6 +20,8 @@ class CardsController < ApplicationController
   end
 
   def create
+    @project = Project.find(params[:id])
+    @board = @project.board.find(params[:id])
     @card = Card.build(card_params)
     if @card.save
 
@@ -30,7 +34,7 @@ class CardsController < ApplicationController
           description: @card.description
         }
       )
-      redirect_to cards_path(@card)
+      redirect_to project_board_cards_path(@project, @board, @card)
     else
       render :new, status: :unprocessable_entity
     end

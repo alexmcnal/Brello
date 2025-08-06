@@ -5,7 +5,8 @@
 
 <div class="toolbar">
   <h1>Brello</h1>
-  <%= link_to "Add Card", new_card_path, class: "button__primary" %>
+  <%= link_to "Add Card", new_project_board_card_path(@project, @board), class: "button__primary" %>
+  <%= link_to "Add Column", new_project_board_board_column_path(@project, @board), class: "button__primary" %>
 </div>
 
 
@@ -16,10 +17,12 @@
     <%= hidden_field_tag :board_id, @board.id %>
     <%= form.submit "Update Card" %>
   <% end %>
-  <% @columns.each do |column| %>
+
+  <% @board_columns.each do |board_column| %>
+    <% column = board_column.column %>
     <div class="board__column">
       <h2 class="board__column-title"><%= column.name.titleize %></h2>
-      <div class="card-container" data-column-id="<%= column.id %>">
+      <div class="card-container" data-column-id="<%= board_column.id %>">
         <% column.cards.by_position.each do |card| %>
           <%= render card %>
         <% end %>
@@ -27,5 +30,6 @@
     </div>
   <% end %>
 </div>
+
 
 

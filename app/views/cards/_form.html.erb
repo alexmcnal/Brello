@@ -3,9 +3,10 @@
 
   <%= form.input :title %>
   <%= form.input :description %>
-  <%= form.input :status, 
+  <%= form.input :column_id, 
     collection: Card::STATUSES.map { |s| [s.humanize, s] },
     prompt: "Select status" %>
   <%= form.button :submit, "Save Card" %>
   
 <% end %>
+``

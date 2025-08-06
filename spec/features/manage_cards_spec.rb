@@ -7,10 +7,13 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
     sign_in
   end
 
-  scenario 'index page show all cards' do
+  fscenario 'index page show all cards' do
     Card.create!(title: 'Test Card', description: 'This is a test card')
 
-    visit cards_path
+    visit root_path
+    click_on 'Project 1'
+    click_on 'Board 1'
+    
     expect(page).to have_css('.card'), 'No cards found on the page'
 
     within('.card') do
