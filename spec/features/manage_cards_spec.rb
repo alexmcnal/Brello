@@ -3,12 +3,16 @@ require 'rails_helper'
 RSpec.describe 'Manage Cards', type: :feature, js: true do
   fixtures :all
 
+  let(:project) { projects(:project_one) }
+  let(:board) { boards(:board_one) }
+
   before do
     sign_in
   end
 
-  fscenario 'index page show all cards' do
-    Card.create!(title: 'Test Card', description: 'This is a test card')
+  scenario 'index page show all cards' do
+    todo_column = columns(:todo_column)
+    Card.create!(title: 'Test Card', description: 'This is a test card', column: todo_column)
 
     visit root_path
     click_on 'Project 1'
@@ -31,14 +35,14 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
   describe 'create a new card' do
     scenario 'new cards appear on the board' do
-      visit cards_path
-
+      visit project_board_path(project, board)
+      
       click_on 'Add Card'
       fill_in 'Title', with: 'New Card'
       fill_in 'Description', with: 'This is a new card'
       click_on 'Save Card'
-
-      visit cards_path
+      
+      visit project_board_path(project, board)
 
       expect(page).to have_css('.card'), 'No cards found on the page'
       within('.card') do
@@ -57,14 +61,14 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
   describe 'edit existing card' do
     scenario 'existing cards can be edited and adhere to changes' do
-      visit cards_path
+      visit project_board_path(project, board)
 
       click_on 'Add Card'
       fill_in 'Title', with: 'Newly Created Card'
       fill_in 'Description', with: 'This is a new card'
       click_on 'Save Card'
 
-      visit cards_path
+      visit project_board_path(project, board)
 
       expect(page).to have_css('.card'), 'No cards found on the page'
       within('.card') do

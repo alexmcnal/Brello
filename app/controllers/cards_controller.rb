@@ -8,9 +8,6 @@ class CardsController < ApplicationController
     @project = @board.project
     @card = Card.find(params[:id])
     @available_columns = @board.columns
-
-  rescue ActiveRecord::RecordNotFound
-    redirect_to project_board_cards_path(@project, @board)
   end
 
   def new
@@ -77,9 +74,11 @@ class CardsController < ApplicationController
   end
 
   def destroy
+    @board = Board.find(params[:board_id])
+    @project = @board.project
     @card = Card.find(params[:id])
     @card.destroy
-    redirect_to cards_path, notice: "Card deleted"
+    redirect_to project_board_path(@project, @board), notice: "Card deleted"
   end
 
   private

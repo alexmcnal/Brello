@@ -10,19 +10,19 @@ RSpec.describe 'Manage Boards', type: :feature, js: true do
   scenario 'index page displays newly created boards' do
     Capybara.using_wait_time(5) do
       visit root_path
-      click_on 'project one'
+      click_on 'Project 1'
       click_on 'New Board'
       fill_in 'Name', with: 'Newly created board'
       fill_in 'Description', with: 'Newly created board description'
       click_on('Save Board')
-      expect(page).to have_content("project one"), "not on project index page"
+      expect(page).to have_content("Project 1"), "not on project index page"
       expect(page).to have_content("Newly created board"), "no board shown"
     end
   end
 
   scenario 'edited boards values change when edited' do
     visit root_path
-      click_on 'project one'
+      click_on 'Project 1'
       click_on 'New Board'
       fill_in 'Name', with: 'Newly created board'
       fill_in 'Description', with: 'Newly created board description'
