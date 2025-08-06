@@ -1,11 +1,12 @@
-<div class="card" data-card-id="<%= card.id %>">
+<%= content_tag :div, class: 'card', data: { update_url: project_board_card_path(@project, @board, card) } do %>
   <%= link_to project_board_card_path(@project, @board, card), class: 'card__title', data: { turbo: false } do %>
     <%= card.title %>
   <% end %>
   <div class="card__description">
     <%= card.description %>
   </div>
-</div>
+<% end %>
+
 
 
 

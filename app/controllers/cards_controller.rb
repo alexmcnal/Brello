@@ -3,25 +3,26 @@ class CardsController < ApplicationController
     @cards_by_status = Card.by_status
   end
 
-  def new
-    @card = Card.new
-  end
-
   def show
     @board = Board.find(params[:board_id])
     @project = @board.project
     @card = Card.find(params[:id])
+    @available_columns = @board.columns
+
   rescue ActiveRecord::RecordNotFound
     redirect_to project_board_cards_path(@project, @board)
   end
 
-  def edit
-    @card = Card.find(params[:id])
+  def new
+    @project = Project.find(params[:project_id])
+    @board = @project.boards.find(params[:board_id])
+    @card = Card.new
+    @available_columns = @board.columns
   end
 
   def create
-    @project = Project.find(params[:id])
-    @board = @project.board.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @board = @project.boards.find(params[:board_id])
     @card = Card.build(card_params)
     if @card.save
 
@@ -34,23 +35,26 @@ class CardsController < ApplicationController
           description: @card.description
         }
       )
-      redirect_to project_board_cards_path(@project, @board, @card)
+      redirect_to project_board_path(@project, @board)
     else
+      @available_columns = @board.columns
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @card = Card.find(params[:id])
+    @available_columns = @board.columns
   end
 
   def update
     @board = Board.find(params[:board_id])
     @project = @board.project
+
     @card = Card.find(params[:id])
-
-    current_title = @card.title
-    current_description = @card.description
-
     @card.attributes = card_params
-    card_changes = @card.changes
 
+    card_changes = @card.changes
     if @card.save
       if params[:position].present?
         @card.insert_at(params[:position].to_i)
@@ -67,6 +71,7 @@ class CardsController < ApplicationController
 
       redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
     else
+      @available_columns = @board.columns
       render :edit
     end
   end
