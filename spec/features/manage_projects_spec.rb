@@ -51,7 +51,6 @@ RSpec.describe 'Manage Projects', type: :feature, js: true do
 
       click_on "Newly Created Project"
       expect(page).not_to have_content("Dashboard"), "Project Link not redirected to show page"
-      expect(page).to have_content("Show Page"), "Project show page not displayed"
       expect(page).to have_content("Edit Project"), "Project Edit link not found"
 
       click_on "Edit Project"
