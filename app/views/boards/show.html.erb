@@ -11,7 +11,10 @@
 
 
 
-<div class="board" data-controller="drag">
+<div
+  class="board"
+  data-controller="drag columns"
+>
   <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
     <%= form.text_field :column_id, data: { drag_target: 'status' } %>
     <%= hidden_field_tag :board_id, @board.id %>
@@ -20,9 +23,20 @@
 
   <% @board_columns.each do |board_column| %>
     <% column = board_column.column %>
-    <div class="board__column">
-      <h2 class="board__column-title"><%= column.name.titleize %></h2>
-      <div class="card-container" data-column-id="<%= board_column.id %>">
+    <div
+      class="board__column"
+      data-board-column-id="<%= board_column.id %>"
+      data-columns-target="column"
+    >
+      <div class="board__column-header drag-handle">
+        <h2 class="board__column-title"><%= column.name.titleize %></h2>
+        <span class="drag-icon">⠿</span>
+      </div>
+
+      <div
+        class="card-container"
+        data-column-id="<%= board_column.id %>"
+      >
         <% column.cards.by_position.each do |card| %>
           <%= render card %>
         <% end %>
@@ -30,6 +44,10 @@
     </div>
   <% end %>
 </div>
+
+
+
+
 
 
 

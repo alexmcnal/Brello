@@ -18,6 +18,16 @@ class BoardColumnsController < ApplicationController
       @available_columns = @project.columns
       render :new, status: :unprocessable_entity
     end
+
+    def update
+      @board_column = BoardColumn.find{params[:id]}
+      if params[:position].present?
+        @board.column.insert_at(params[:position].to_i)
+        head :ok
+      else
+        render json: { error: 'No position given' }, status: :unprocessable_entity
+      end
+    end
   end
 
   private
