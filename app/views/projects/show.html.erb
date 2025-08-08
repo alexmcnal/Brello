@@ -4,6 +4,8 @@
 
 <%= link_to "New Board", new_project_board_path(@project) %>
 
+<%= link_to "New Column", new_project_column_path(@project) %>
+
 <% @boards.each do |board| %>
   <%= link_to project_board_path(@project, board), class: "project-card-link" do %>
     <div class="board-card">
@@ -12,3 +14,14 @@
     </div>
   <% end %>
 <% end %>
+
+<div class="columns">
+  <% @columns.each do |column| %>
+    <%= link_to project_column_path(@project, column) do %>
+      <div class="column-card">
+        <h3><%= column.name %></h3>
+        <h4><%= column.description %></h4>
+      </div>
+    <% end %>
+  <% end %>
+</div>

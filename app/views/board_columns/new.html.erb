@@ -1,0 +1,7 @@
+<%= simple_form_for [@board.project, @board, @board_column] do |form| %>
+  <%= form.input :column_id, 
+        collection: @available_columns.map { |col| [col.name, col.id] },
+        prompt: "Select a column to add" %>
+
+  <%= form.button :submit, "Add Column" %>
+<% end %>

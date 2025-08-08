@@ -95,3 +95,5 @@ speed_snail:
 
 speed_flying_saucer:
 	docker update --cpus=32 $(CONTAINER_ID)
+
+reset: prune_postgres up web_server

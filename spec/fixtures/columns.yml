@@ -1,0 +1,11 @@
+todo_column:
+  name: "To Do"
+  project: project_one
+
+in_progress_column:
+  name: "In Progress"
+  project: project_one
+
+done_column:
+  name: "Done"
+  project: project_one

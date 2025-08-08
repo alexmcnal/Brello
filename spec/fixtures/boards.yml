@@ -1,0 +1,4 @@
+board_one:
+  name: "Board 1"
+  description: "This is the main board"
+  project: project_one

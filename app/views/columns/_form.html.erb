@@ -1,0 +1,9 @@
+<%= simple_form_for([@project, @column]) do |form| %>
+  <%= yield %>
+
+  <%= form.input :name %>
+  <%= form.input :description %>
+
+  <%= form.button :submit, "Save Column" %>
+  
+<% end %>

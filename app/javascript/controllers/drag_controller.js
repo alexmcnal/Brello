@@ -52,8 +52,8 @@ export default class extends Controller {
       }
 
       if (this.hasFormTarget) {
-        const cardId = event.data.dragEvent.data.source.dataset.cardId;
-        this.formTarget.action = `/cards/${cardId}`;
+        const updateUrl = event.data.dragEvent.data.source.dataset.updateUrl;
+        this.formTarget.action = updateUrl;
         
         // Update hidden fields for status and position
         this.statusTarget.value = newContainer.dataset.columnId;
