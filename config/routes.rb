@@ -31,6 +31,8 @@ Rails.application.routes.draw do
     end
     resources :columns
   end
+  resources :board_columns, only: [:update]
+
   resources :actions, only: [ :index ]
   
   

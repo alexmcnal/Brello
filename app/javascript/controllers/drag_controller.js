@@ -3,14 +3,16 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
 
   static targets = ["form", "status"];
+  static classes = ["dropTarget", "draggable", "dragging", "dropIndicator"];
 
   connect() {
+    console.log(this.dropIndicatorClass)
     const Sortable = window.Draggable.Sortable;
 
     this.sortable = new Sortable(
-      this.element.querySelectorAll(".card-container"), // use board__column as containers
+      this.element.querySelectorAll(this.dropTargetClass), // use board__column as containers
       {
-        draggable: ".card", // draggable cards inside columns
+        draggable: this.draggableClass, // draggable cards inside columns
         mirror: {
           constrainDimensions: true
         }
@@ -22,11 +24,11 @@ export default class extends Controller {
     });
 
     this.sortable.on('drag:start', (event) => {
-      event.source.classList.add('card--dragging'); // style original dragged card
+      event.source.classList.add(this.draggingClass); // style original dragged card
     });
 
     this.sortable.on('drag:stop', (event) => {
-      event.source.classList.remove('card--dragging');
+      event.source.classList.remove(this.draggingClass);
       this.removeInsertionIndicators();
     });
 
@@ -34,7 +36,7 @@ export default class extends Controller {
       this.removeInsertionIndicators();
 
       const indicator = document.createElement('div');
-      indicator.classList.add('drop-indicator');
+      indicator.classList.add(this.dropIndicatorClass);
 
       const sibling = event.over;
       const parent = sibling?.parentNode;
@@ -91,6 +93,6 @@ export default class extends Controller {
   }
 
   removeInsertionIndicators() {
-    document.querySelectorAll('.drop-indicator').forEach(el => el.remove());
+    document.querySelectorAll(this.dropIndicatorClass).forEach(el => el.remove());
   }
 }

@@ -13,7 +13,11 @@
 
 <div
   class="board"
-  data-controller="drag columns"
+  data-controller="drag"
+  data-drag-drop-target-class=".card-container"
+  data-drag-draggable-class=".card"
+  data-drag-dragging-class="card--dragging"
+  data-drag-drop-indicator-class="drop-indicator"
 >
   <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
     <%= form.text_field :column_id, data: { drag_target: 'status' } %>
@@ -24,22 +28,31 @@
   <% @board_columns.each do |board_column| %>
     <% column = board_column.column %>
     <div
-      class="board__column"
-      data-board-column-id="<%= board_column.id %>"
-      data-columns-target="column"
+      class="board"
+      data-controller="drag"
+      data-drag-drop-target-class=".column-container"
+      data-drag-draggable-class=".column"
+      data-drag-dragging-class="column--dragging"
+      data-drag-drop-indicator-class="drop-indicator"
     >
-      <div class="board__column-header drag-handle">
-        <h2 class="board__column-title"><%= column.name.titleize %></h2>
-        <span class="drag-icon">⠿</span>
-      </div>
-
       <div
-        class="card-container"
-        data-column-id="<%= board_column.id %>"
+        class="board__column"
+        data-board-column-id="<%= board_column.id %>"
+        data-columns-target="column"
       >
-        <% column.cards.by_position.each do |card| %>
-          <%= render card %>
-        <% end %>
+        <div class="board__column-header drag-handle">
+          <h2 class="board__column-title"><%= column.name.titleize %></h2>
+          <span class="drag-icon">⠿</span>
+        </div>
+
+        <div
+          class="card-container"
+          data-column-id="<%= board_column.id %>"
+        >
+          <% column.cards.by_position.each do |card| %>
+            <%= render card %>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>

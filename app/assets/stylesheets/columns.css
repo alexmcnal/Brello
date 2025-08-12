@@ -1,8 +1,8 @@
 .column-card{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 160);
-    width: 16rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 160);
+  width: 16rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
