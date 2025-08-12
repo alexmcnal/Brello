@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
 
   static targets = ["form", "status"];
-  static classes = ["dropTarget", "draggable", "dragging", "dropIndicator"];
+  static classes = ["dropTarget", "draggable", "dragging", "dropIndicator", "handle"];
 
   connect() {
     console.log(this.dropIndicatorClass)
@@ -13,6 +13,7 @@ export default class extends Controller {
       this.element.querySelectorAll(this.dropTargetClass), // use board__column as containers
       {
         draggable: this.draggableClass, // draggable cards inside columns
+        handle: this.handleClass,
         mirror: {
           constrainDimensions: true
         }

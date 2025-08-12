@@ -10,56 +10,54 @@
 </div>
 
 
-
 <div
-  class="board"
+  class="board-wrapper"
   data-controller="drag"
-  data-drag-drop-target-class=".card-container"
-  data-drag-draggable-class=".card"
-  data-drag-dragging-class="card--dragging"
+  data-drag-drop-target-class=".board"
+  data-drag-draggable-class=".board__column"
+  data-drag-dragging-class="board__column--dragging"
   data-drag-drop-indicator-class="drop-indicator"
+  data-drag-handle-class=".drag-icon"
 >
-  <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
-    <%= form.text_field :column_id, data: { drag_target: 'status' } %>
-    <%= hidden_field_tag :board_id, @board.id %>
-    <%= form.submit "Update Card" %>
-  <% end %>
+  <div
+    class="board"
+    data-controller="drag"
+    data-drag-drop-target-class=".card-container"
+    data-drag-draggable-class=".card"
+    data-drag-dragging-class="card--dragging"
+    data-drag-drop-indicator-class="drop-indicator"
+    data-drag-handle-class=".card"
+  >
+    <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
+      <%= form.text_field :column_id, data: { drag_target: 'status' } %>
+      <%= hidden_field_tag :board_id, @board.id %>
+      <%= form.submit "Update Card" %>
+    <% end %>
 
-  <% @board_columns.each do |board_column| %>
-    <% column = board_column.column %>
-    <div
-      class="board"
-      data-controller="drag"
-      data-drag-drop-target-class=".column-container"
-      data-drag-draggable-class=".column"
-      data-drag-dragging-class="column--dragging"
-      data-drag-drop-indicator-class="drop-indicator"
-    >
-      <div
-        class="board__column"
-        data-board-column-id="<%= board_column.id %>"
-        data-columns-target="column"
-      >
+    <% @board_columns.each do |board_column| %>
+      <% column = board_column.column %>
+        <div
+          class="board__column"
+          data-board-column-id="<%= board_column.id %>"
+          data-columns-target="column"
+        >
         <div class="board__column-header drag-handle">
           <h2 class="board__column-title"><%= column.name.titleize %></h2>
           <span class="drag-icon">⠿</span>
         </div>
 
         <div
-          class="card-container"
-          data-column-id="<%= board_column.id %>"
+            class="card-container"
+            data-column-id="<%= board_column.id %>"
         >
           <% column.cards.by_position.each do |card| %>
             <%= render card %>
           <% end %>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
-
-
 
 
 
