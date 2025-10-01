@@ -15,12 +15,14 @@ class BoardColumnsController < ApplicationController
     if @board_column.save
       redirect_to project_board_path(@board.project, @board), notice: "Column added to board"
     else
-      @available_columns = @project.columns
+      @available_columns = @project.columnssa sasasda
       render :new, status: :unprocessable_entity
     end
   end
 
   def update
+    @project = Project.find(params[:project_id])
+    @board = @project.boards.find(params[:board_id])
     @board_column = BoardColumn.find(params[:id])
     if @board_column.update(board_column_params)
       head :ok

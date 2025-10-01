@@ -1,6 +1,6 @@
 <h1>SHOW PAGE<h1>
-<h2><%= @board.name%></h2>
-<h3><%= @board.description%></h3>
+<h2><%= @board.name %></h2>
+<h3><%= @board.description %></h3>
 <%= link_to "Edit Board", edit_project_board_path(@project, @board) %>
 
 <div class="toolbar">
@@ -9,47 +9,54 @@
   <%= link_to "Add Column", new_project_board_board_column_path(@project, @board), class: "button__primary" %>
 </div>
 
-
 <div
   class="board-wrapper"
-  data-controller="drag"
-  data-drag-drop-target-class=".board"
-  data-drag-draggable-class=".board__column"
-  data-drag-dragging-class="board__column--dragging"
-  data-drag-drop-indicator-class="drop-indicator"
-  data-drag-handle-class=".drag-icon"
+  data-controller="column-drag"
+  data-project-id="<%= @project.id %>"
+  data-board-id="<%= @board.id %>"
+  data-column-drag-draggable-class=".board__column"
+  data-column-drag-dragging-class="board__column--dragging"
+  data-column-drag-drop-indicator-class="drop-indicator"
+  data-column-drag-handle-class=".drag-icon"
+  data-drag-form-id="columns-form"
 >
   <div
     class="board"
-    data-controller="drag"
-    data-drag-drop-target-class=".card-container"
-    data-drag-draggable-class=".card"
-    data-drag-dragging-class="card--dragging"
-    data-drag-drop-indicator-class="drop-indicator"
-    data-drag-handle-class=".card"
+    data-controller="card-drag"
+    data-card-drag-drop-target-class=".card-container"
+    data-card-drag-draggable-class=".card"
+    data-card-drag-dragging-class="card--dragging"
+    data-card-drag-drop-indicator-class="drop-indicator"
+    data-card-drag-handle-class=".card"
   >
-    <%= form_for :card, url: '/cards/id', method: :patch, data: { turbo: false, drag_target: 'form' }, class: 'hidden' do |form| %>
-      <%= form.text_field :column_id, data: { drag_target: 'status' } %>
+    <!-- Hidden form for updating cards -->
+    <%= form_for :card, url: '/cards/id', method: :patch,
+                 data: { turbo: false }, id: 'cards-form', class: 'hidden' do |form| %>
+      <%= form.text_field :column_id %>
       <%= hidden_field_tag :board_id, @board.id %>
       <%= form.submit "Update Card" %>
     <% end %>
 
-    <% @board_columns.each do |board_column| %>
+    <!-- Hidden form for updating columns -->
+    <%= form_for :board_column, url: '/board_columns/id', method: :patch,
+                 data: { turbo: false }, id: 'columns-form', class: 'hidden' do |form| %>
+      <%= form.text_field :position %>
+      <%= hidden_field_tag :board_id, @board.id %>
+      <%= form.submit "Update Column" %>
+    <% end %>
+
+    <% @board_columns.order(:position).each do |board_column| %>
       <% column = board_column.column %>
-        <div
-          class="board__column"
-          data-board-column-id="<%= board_column.id %>"
-          data-columns-target="column"
-        >
+      <div
+        class="board__column"
+        data-board-column-id="<%= board_column.id %>"
+      >
         <div class="board__column-header drag-handle">
           <h2 class="board__column-title"><%= column.name.titleize %></h2>
           <span class="drag-icon">⠿</span>
         </div>
 
-        <div
-            class="card-container"
-            data-column-id="<%= board_column.id %>"
-        >
+        <div class="card-container" data-column-id="<%= board_column.id %>">
           <% column.cards.by_position.each do |card| %>
             <%= render card %>
           <% end %>
@@ -58,7 +65,3 @@
     <% end %>
   </div>
 </div>
-
-
-
-
