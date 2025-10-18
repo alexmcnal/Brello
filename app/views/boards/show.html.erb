@@ -1,10 +1,11 @@
 
-<%= link_to "Open Drawer", "#", data: { controller: "send-event", action: "send-event#openDrawer" } %>
-<%= link_to "Close Drawer", "#", data: { controller: "send-event", action: "send-event#closeDrawer" } %>
+<%= link_to "Open Drawer", "#", data: { controller: "drawer-switch", action: "drawer-switch#openDrawer", drawer_switch_url_value: '/projects/1/boards/1/cards/13' } %>
+<%= link_to "Close Drawer", "#", data: { controller: "drawer-switch", action: "drawer-switch#closeDrawer" } %>
 
 <div class="drawer" data-controller="drawer" data-drawer-open-class="drawer--open">
-  <h1>Drawer</h1>
-  <p data-drawer-target="message">Hello World!</p>
+  <%= turbo_frame_tag "drawer_content", data: { drawer_target: 'content' } do %>
+    <h1>Drawer Content</h1>
+  <% end %>
 </div>
 
 <h1>SHOW PAGE<h1>

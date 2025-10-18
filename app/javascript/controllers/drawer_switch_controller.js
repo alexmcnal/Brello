@@ -2,6 +2,11 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="send-event"
 export default class extends Controller {
+
+  static values = {
+    url: String,
+  }
+
   connect() {
     console.log('SendEvent controller connected')
   }
@@ -13,7 +18,7 @@ export default class extends Controller {
     const openDrawerEvent = new CustomEvent("openDrawer", {
       bubbles: true,
       detail: {
-        name: "open drawer",
+        url: this.urlValue
       },
     })
 

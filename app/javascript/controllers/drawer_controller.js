@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="drawer"
 export default class extends Controller {
 
-  static targets = [ 'message' ]
+  static targets = [ 'content' ]
   static classes = [ 'open']
 
   connect() {
@@ -11,8 +11,9 @@ export default class extends Controller {
     document.addEventListener('closeDrawer', this.closeDrawer.bind(this))
   }
 
-  openDrawer() {
+  openDrawer(event) {
     this.element.classList.add(this.openClass)
+    this.contentTarget.src = event.detail.url
   }
 
   closeDrawer() {
