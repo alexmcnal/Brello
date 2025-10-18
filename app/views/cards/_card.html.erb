@@ -1,12 +1,23 @@
-<%= content_tag :div, class: 'card', data: { update_url: project_board_card_path(@project, @board, card) } do %>
-  <%= link_to project_board_card_path(@project, @board, card), class: 'card__title', data: { turbo: false } do %>
+<%= content_tag :div, 
+  class: "card", 
+  data: { 
+    controller: "card", 
+    update_url: project_board_card_path(@project, @board, card), 
+    card_id: card.id 
+  } do %>
+
+  <%= link_to project_board_card_path(@project, @board, card), 
+              class: "card__title", 
+              data: { turbo: false } do %>
     <%= card.title %>
   <% end %>
+
   <div class="card__description">
     <%= card.description %>
   </div>
+
+  <!-- This will be hidden until hover -->
+  <div class="card__actions">
+    <%= link_to "Edit", edit_project_board_card_path(@project, @board, card), class: "card__edit-btn" %>
+  </div>
 <% end %>
-
-
-
-

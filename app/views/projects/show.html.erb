@@ -1,10 +1,10 @@
 <h2><%= @project.name %></h2>
 
-<%= link_to "Edit Project", edit_project_path(@project.id) %>
+<%= link_to "Edit Project", edit_project_path(@project.id), class: "button__primary"  %>
 
-<%= link_to "New Board", new_project_board_path(@project) %>
+<%= link_to "New Board", new_project_board_path(@project), class: "button__primary"  %>
 
-<%= link_to "New Column", new_project_column_path(@project) %>
+<%= link_to "New Column", new_project_column_path(@project), class: "button__primary"  %>
 
 <% @boards.each do |board| %>
   <%= link_to project_board_path(@project, board), class: "project-card-link" do %>

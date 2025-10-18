@@ -3,10 +3,10 @@ class Card < ApplicationRecord
 
   validates :title, presence: true
 
-  acts_as_list scope: [ :column_id ]
-
+  
   has_many :actions
   belongs_to :column
+  acts_as_list scope: [ :column_id ]
   
   scope :by_position, -> { order(position: :asc) }
 

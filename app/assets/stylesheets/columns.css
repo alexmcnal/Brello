@@ -1,8 +1,11 @@
 .column-card{
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   background-color: rgb(255, 255, 160);
+  border: 1px solid rgb(255, 255, 33);
   width: 16rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
   border-radius: 1rem;
 }

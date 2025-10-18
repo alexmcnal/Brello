@@ -15,8 +15,8 @@ export default class extends Controller {
     this.cardSortable = new Sortable(
       this.element.querySelectorAll(this.dropTargetClass), // .card-container
       {
-        draggable: this.draggableClass, // .card
-        handle: this.handleClass,       // .card or drag handle
+        draggable: this.draggableClass,
+        handle: this.handleClass,
         mirror: { constrainDimensions: true },
       }
     );
@@ -38,44 +38,30 @@ export default class extends Controller {
     this.cardSortable?.destroy();
   }
 
-  // --- Handlers ---
-  handleCardStop(event) {
+  async handleCardStop(event) {
     const { newContainer, newIndex, oldContainer, oldIndex } = event;
     if (newContainer === oldContainer && newIndex === oldIndex) return;
-
-    const form = document.getElementById("cards-form");
-    if (!form) return;
 
     const source = event.dragEvent.source;
     const updateUrl = source.dataset.updateUrl;
 
-    form.action = updateUrl;
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
-    // Column ID
-    let statusInput = form.querySelector('input[name="card[column_id]"]');
-    if (!statusInput) {
-      statusInput = document.createElement("input");
-      statusInput.type = "hidden";
-      statusInput.name = "card[column_id]";
-      form.appendChild(statusInput);
-    }
-    statusInput.value = newContainer.dataset.columnId;
+    const body = new URLSearchParams();
+    body.append("card[column_id]", newContainer.dataset.columnId);
+    body.append("card[position]", newIndex + 1);
 
-    // Position
-    let positionInput = form.querySelector('input[name="card[position]"]');
-    if (!positionInput) {
-      positionInput = document.createElement("input");
-      positionInput.type = "hidden";
-      positionInput.name = "card[position]";
-      form.appendChild(positionInput);
-    }
-    positionInput.value = newIndex + 1;
-
-    this.addCsrfToken(form);
-    form.submit();
+    await fetch(updateUrl, {
+      method: "PATCH",
+      headers: {
+        "X-CSRF-Token": csrfToken,
+        "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/json",
+      },
+      body: body.toString(),
+    });
   }
 
-  // --- Shared helpers ---
   showInsertionIndicator(event) {
     this.removeInsertionIndicators();
     const indicator = document.createElement("div");
@@ -90,17 +76,5 @@ export default class extends Controller {
 
   removeInsertionIndicators() {
     document.querySelectorAll(`.${this.dropIndicatorClass}`).forEach((el) => el.remove());
-  }
-
-  addCsrfToken(form) {
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-    let csrfInput = form.querySelector('input[name="authenticity_token"]');
-    if (!csrfInput) {
-      csrfInput = document.createElement("input");
-      csrfInput.type = "hidden";
-      csrfInput.name = "authenticity_token";
-      form.appendChild(csrfInput);
-    }
-    csrfInput.value = csrfToken;
   }
 }

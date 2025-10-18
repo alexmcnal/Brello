@@ -1,12 +1,13 @@
 .project-card {
-  background-color: #e6f0fa;      /* Light blue-gray, not yellow */
-  border: 1px solid #b3cce6;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 24px;
-  width: 100%;
-  max-width: 800px;
-  min-height: 200px;
+  background-color: hsl(0, 0%, 100%);      /* Light blue-gray, not yellow */
+  border: 1px solid #d1d1d1;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 40rem;
+  max-width: 60rem;
+  height: 12rem;
+  min-height: 18rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
@@ -29,12 +30,19 @@
 .project-card-link {
   text-decoration: none;
   color: inherit;
-  display: block; /* make the whole card clickable */
+  display: block;
   width: fit-content;
+  min-width: 200px;
 }
 
 .project-card-link:hover .project-card {
-  /* example hover effect */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+.project-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 1.2rem;
 }
