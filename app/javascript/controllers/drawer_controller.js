@@ -9,6 +9,7 @@ export default class extends Controller {
   connect() {
     document.addEventListener('openDrawer', this.openDrawer.bind(this))
     document.addEventListener('closeDrawer', this.closeDrawer.bind(this))
+    document.addEventListener('keydown', this.handleEscape.bind(this))
   }
 
   openDrawer(event) {
@@ -18,5 +19,11 @@ export default class extends Controller {
 
   closeDrawer() {
     this.element.classList.remove(this.openClass)
+  }
+
+  handleEscape(event) {
+    if (event.key === "Escape") {
+      this.closeDrawer()
+    }
   }
 }

@@ -6,9 +6,9 @@
     card_id: card.id 
   } do %>
 
-  <%= link_to project_board_card_path(@project, @board, card), 
+  <%= link_to "#",
               class: "card__title", 
-              data: { turbo: false } do %>
+              data: { controller: "drawer-switch", action: "drawer-switch#openDrawer", drawer_switch_url_value: project_board_card_path(@project, @board, card) } do %>
     <%= card.title %>
   <% end %>
 
@@ -16,8 +16,4 @@
     <%= card.description %>
   </div>
 
-  <!-- This will be hidden until hover -->
-  <div class="card__actions">
-    <%= link_to "Edit", edit_project_board_card_path(@project, @board, card), class: "card__edit-btn" %>
-  </div>
 <% end %>

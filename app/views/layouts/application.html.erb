@@ -32,7 +32,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body data-controller="drawer-switch" data-action="keydown.esc->drawer-switch#closeDrawer" >
     <%= yield %>
   </body>
 </html>
