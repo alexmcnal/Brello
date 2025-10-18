@@ -4,14 +4,18 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   static targets = [ 'message' ]
+  static classes = [ 'open']
 
   connect() {
-    console.log('Draw controller connected')
     document.addEventListener('openDrawer', this.openDrawer.bind(this))
+    document.addEventListener('closeDrawer', this.closeDrawer.bind(this))
   }
 
   openDrawer() {
-    console.log("Drawer opened")
-    this.messageTarget.innerHTML = 'TESTING'
+    this.element.classList.add(this.openClass)
+  }
+
+  closeDrawer() {
+    this.element.classList.remove(this.openClass)
   }
 }
