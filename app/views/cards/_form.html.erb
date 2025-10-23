@@ -7,6 +7,6 @@
         collection: @available_columns.map { |col| [col.name, col.id] },
         selected: @card.column_id || @available_columns.first.id,
         blank: false %>
-  <%= form.button :submit, "Save Card", data: { action: "click->drawer-switch#closeDrawer" } %>
+  <%= form.button :submit, "Save Card", data: { action: "drawer#close" } %>
   
 <% end %>
