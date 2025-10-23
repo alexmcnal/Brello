@@ -71,10 +71,10 @@ class CardsController < ApplicationController
         format.html { redirect_to project_board_path(@project, @board), notice: "Card updated successfully" }
         format.turbo_stream { 
           Turbo::StreamsChannel.broadcast_replace_to(
-            "application",
+            dom_id(@project, :board),
             target: dom_id(@card, :board),
             partial: "cards/card",
-            locals: { card: @card }
+            locals: { card: @card, board: @board, project: @project }
           )
           head :ok
         }

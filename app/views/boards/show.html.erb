@@ -1,3 +1,4 @@
+<%= turbo_stream_from dom_id(@project, :board) %>
 
 <div class="drawer" data-controller="drawer" data-drawer-open-class="drawer--open">
   <%= link_to "Close Drawer", "#", data: { controller: "drawer", action: "drawer#close", drawer_switch_url_value: project_board_path(@project, @board) } %>
@@ -66,7 +67,7 @@
 
         <div class="card-container" data-column-id="<%= board_column.id %>">
           <% column.cards.by_position.each do |card| %>
-            <%= render card %>
+            <%= render card, board: @board, project: @project %>
           <% end %>
         </div>
       </div>

@@ -3,11 +3,11 @@
   class: "card", 
   data: { 
     controller: "card", 
-    update_url: project_board_card_path(@project, @board, card), 
+    update_url: project_board_card_path(project, board, card), 
     card_id: card.id 
   } do %>
 
-  <%= link_to project_board_card_path(@project, @board, card),
+  <%= link_to project_board_card_path(project, board, card),
               class: "card__title", 
               data: { controller: "drawer", action: "drawer#open" } do %>
     <%= card.title %>
