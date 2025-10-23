@@ -6,18 +6,28 @@ export default class extends Controller {
   static targets = [ 'content' ]
   static classes = [ 'open']
 
-  connect() {
-    document.addEventListener('openDrawer', this.openDrawer.bind(this))
-    document.addEventListener('closeDrawer', this.closeDrawer.bind(this))
-    document.addEventListener('keydown', this.handleEscape.bind(this))
+  contentTargetConnected() {
+    this.handleOpenDrawer = this.handleOpenDrawer.bind(this)
+    this.handleCloseDrawer = this.handleCloseDrawer.bind(this)
+    this.handleEscape = this.handleEscape.bind(this)
+
+    document.addEventListener('openDrawer', this.handleOpenDrawer)
+    document.addEventListener('closeDrawer', this.handleCloseDrawer)
+    document.addEventListener('keydown', this.handleEscape)
   }
 
-  openDrawer(event) {
+  contentTargetDisconnected() {
+    document.removeEventListener('openDrawer', this.handleOpenDrawer)
+    document.removeEventListener('closeDrawer', this.handleCloseDrawer)
+    document.removeEventListener('keydown', this.handleEscape)
+  }
+
+  handleOpenDrawer(event) {
     this.element.classList.add(this.openClass)
     this.contentTarget.src = event.detail.url
   }
 
-  closeDrawer() {
+  handleCloseDrawer() {
     this.element.classList.remove(this.openClass)
   }
 
