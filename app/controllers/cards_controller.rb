@@ -66,7 +66,19 @@ class CardsController < ApplicationController
         )
       end
 
-      redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
+      # redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
+      respond_to do |format|
+        format.html { redirect_to project_board_path(@project, @board), notice: "Card updated successfully" }
+        format.turbo_stream { 
+          Turbo::StreamsChannel.broadcast_replace_to(
+            "application",
+            target: dom_id(@card, :board),
+            partial: "cards/card",
+            locals: { card: @card }
+          )
+          head :ok
+        }
+      end
     else
       @available_columns = @board.columns
       render :edit
