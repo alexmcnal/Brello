@@ -7,10 +7,11 @@
 }
 
 .card {
-  --card-background-color: var(--color-light-yellow);
+  --card-background-color: var(--color-white);
+  --card-radius: var(--border-radius-xs);
 
   background-color: var(--card-background-color);
-  border-radius: 0.5rem;
+  border-radius: var(--card-radius);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   padding: 1rem;
   width: 100%;

@@ -53,6 +53,12 @@
   --color-extra-light-grey: #cccccc;
   --color-very-extra-light-grey: #f5f5f5;
 
+
+  --border-radius-xs: 0.2rem;
+  --border-radius-sm: 0.3rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+
   @font-face {
     font-family: 'Nunito';
     src: url(asset-path('nunito/Nunito-Regular.woff2')) format('woff2'),
