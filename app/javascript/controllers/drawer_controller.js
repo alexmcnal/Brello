@@ -31,7 +31,7 @@ export default class extends Controller {
   }
 
   contentTargetConnected() {
-    console.log("contentTargetConnected")
+    console.log("drawer contentTargetConnected")
     this.handleOpenDrawer = this.handleOpenDrawer.bind(this)
     this.handleCloseDrawer = this.handleCloseDrawer.bind(this)
     this.handleEscape = this.handleEscape.bind(this)

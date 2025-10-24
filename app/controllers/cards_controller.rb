@@ -32,7 +32,16 @@ class CardsController < ApplicationController
           description: @card.description
         }
       )
-      redirect_to project_board_path(@project, @board)
+
+      respond_to do |format|
+        format.html { redirect_to project_board_path(@project, @board) }
+        format.turbo_stream {
+          render turbo_stream: [
+            close_dialog,
+            turbo_stream.append(dom_id(@card.column), partial: 'card', locals: { card: @card, board: @board, project: @project })
+          ]        
+        }
+      end
     else
       @available_columns = @board.columns
       render :new, status: :unprocessable_entity
@@ -98,4 +107,5 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:title, :description, :column_id, :status, :position)
   end
+
 end

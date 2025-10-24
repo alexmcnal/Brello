@@ -1,5 +1,5 @@
 <div class="drawer" data-controller="drawer" data-drawer-open-class="drawer--open">
-  <%= link_to "Close Drawer", "#", data: { controller: "drawer", action: "drawer#close", drawer_switch_url_value: project_board_path(@project, @board) } %>
+  <%= button_tag "Close Drawer", type: "button", data: { controller: "drawer", action: "drawer#close", drawer_switch_url_value: project_board_path(@project, @board) } %>
   <%= turbo_frame_tag "drawer_content", data: { drawer_target: 'content' } do %>
     <h1>Drawer Content</h1>
   <% end %>

@@ -30,7 +30,7 @@ export default class extends Controller {
   }
 
   contentTargetConnected() {
-    console.log("contentTargetConnected")
+    console.log("dialogcontentTargetConnected")
     this.handleOpenDialog = this.handleOpenDialog.bind(this)
     this.handleCloseDialog = this.handleCloseDialog.bind(this)
     this.handleEscape = this.handleEscape.bind(this)

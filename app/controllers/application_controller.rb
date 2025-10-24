@@ -25,4 +25,8 @@ class ApplicationController < ActionController::Base
     Current.user_agent = request.user_agent
     Current.ip_address = request.ip
   end
+
+  def close_dialog
+    turbo_stream.replace('dialog', partial: 'dialog')
+  end
 end

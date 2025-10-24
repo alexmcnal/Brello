@@ -58,11 +58,11 @@
           <span class="drag-icon">⠿</span>
         </div>
 
-        <div class="card-container" data-column-id="<%= board_column.id %>">
+        <%= content_tag :div, id: dom_id(column), class: "card-container", data: { column_id: board_column.id } do %>
           <% column.cards.by_position.each do |card| %>
             <%= render card, board: @board, project: @project %>
           <% end %>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
