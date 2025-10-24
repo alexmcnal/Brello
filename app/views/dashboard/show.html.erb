@@ -1,7 +1,7 @@
 <h1>Dashboard</h1>
 <%= link_to "New Project", new_project_path %>
 
-<div class="projects">
+<div class="project-container">
   <% @projects.each do |project| %>
     <%= link_to project_path(project), class: "project-card-link" do %>
       <div class="project-card">

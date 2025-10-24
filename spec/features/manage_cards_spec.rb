@@ -3,14 +3,21 @@ require 'rails_helper'
 RSpec.describe 'Manage Cards', type: :feature, js: true do
   fixtures :all
 
+  let(:project) { projects(:project_one) }
+  let(:board) { boards(:board_one) }
+
   before do
     sign_in
   end
 
   scenario 'index page show all cards' do
-    Card.create!(title: 'Test Card', description: 'This is a test card')
+    todo_column = columns(:todo_column)
+    Card.create!(title: 'Test Card', description: 'This is a test card', column: todo_column)
 
-    visit cards_path
+    visit root_path
+    click_on 'Project 1'
+    click_on 'Board 1'
+    
     expect(page).to have_css('.card'), 'No cards found on the page'
 
     within('.card') do
@@ -26,16 +33,16 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
     end
   end
 
-  describe 'Create a new card' do
+  describe 'create a new card' do
     scenario 'new cards appear on the board' do
-      visit cards_path
-
+      visit project_board_path(project, board)
+      
       click_on 'Add Card'
       fill_in 'Title', with: 'New Card'
       fill_in 'Description', with: 'This is a new card'
       click_on 'Save Card'
-
-      visit cards_path
+      
+      visit project_board_path(project, board)
 
       expect(page).to have_css('.card'), 'No cards found on the page'
       within('.card') do
@@ -52,16 +59,16 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
     end
   end
 
-  describe 'Edit existing card' do
+  describe 'edit existing card' do
     scenario 'existing cards can be edited and adhere to changes' do
-      visit cards_path
+      visit project_board_path(project, board)
 
       click_on 'Add Card'
       fill_in 'Title', with: 'Newly Created Card'
       fill_in 'Description', with: 'This is a new card'
       click_on 'Save Card'
 
-      visit cards_path
+      visit project_board_path(project, board)
 
       expect(page).to have_css('.card'), 'No cards found on the page'
       within('.card') do
@@ -80,8 +87,8 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
       fill_in 'Title', with: 'Newly Created Card Edit'
       fill_in 'Description', with: 'This is a new card edit'
       click_on 'Save Card'
-      expect(page).to have_content('Newly Created Card Edit'), 'Card title has not adhered to changed params'
-      expect(page).to have_content('This is a new card edit'), 'Card description has not adhered to changed params'
+      expect(page).to have_content('Newly Created Card Edit'), 'Card title has not changed when edited'
+      expect(page).to have_content('This is a new card edit'), 'Card description has not changed when edited'
     end
   end
 end

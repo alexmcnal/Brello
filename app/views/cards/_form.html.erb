@@ -1,11 +1,12 @@
-<%= simple_form_for @card do |form| %>
+<%= simple_form_for [@project, @board, @card] do |form| %>
   <%= yield %>
 
   <%= form.input :title %>
   <%= form.input :description %>
-  <%= form.input :status, 
-    collection: Card::STATUSES.map { |s| [s.humanize, s] },
-    prompt: "Select status" %>
-  <%= form.button :submit, "Save Card" %>
+  <%= form.input :column_id, 
+        collection: @available_columns.map { |col| [col.name, col.id] },
+        selected: @card.column_id || @available_columns.first.id,
+        blank: false %>
+  <%= form.button :submit, "Save Card", data: { action: "drawer#close" } %>
   
 <% end %>

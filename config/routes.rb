@@ -25,9 +25,15 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [ :show ]
   resources :projects do
-    resources :boards
+    resources :boards do
+      resources :cards, only: [ :show, :new, :create, :edit, :update, :destroy ]
+      resources :board_columns
+    end
+    resources :columns
   end
-  resources :actions, only: [ :index ]
+  resources :board_columns, only: [:update]
 
-  resources :cards
+  resources :actions, only: [ :index ]
+  
+  
 end

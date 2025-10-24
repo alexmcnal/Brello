@@ -104,5 +104,17 @@
 }
 
 .card-container {
+  position: relative;
   height: 100%;
+}
+
+.card__actions {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.card:hover .card__actions {
+  display: block;
 }

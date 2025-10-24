@@ -1,0 +1,11 @@
+board_one_todo_column:
+  board: board_one
+  column: todo_column
+
+board_one_in_progress_column:
+  board: board_one
+  column: in_progress_column
+
+board_one_done_column:
+  board: board_one
+  column: done_column

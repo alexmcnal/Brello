@@ -1,8 +1,10 @@
 <h2><%= @project.name %></h2>
 
-<%= link_to "Edit Project", edit_project_path(@project.id) %>
+<%= link_to "Edit Project", edit_project_path(@project.id), class: "button__primary"  %>
 
-<%= link_to "New Board", new_project_board_path(@project) %>
+<%= link_to "New Board", new_project_board_path(@project), class: "button__primary"  %>
+
+<%= link_to "New Column", new_project_column_path(@project), class: "button__primary"  %>
 
 <% @boards.each do |board| %>
   <%= link_to project_board_path(@project, board), class: "project-card-link" do %>
@@ -12,3 +14,14 @@
     </div>
   <% end %>
 <% end %>
+
+<div class="columns">
+  <% @columns.each do |column| %>
+    <%= link_to project_column_path(@project, column) do %>
+      <div class="column-card">
+        <h3><%= column.name %></h3>
+        <h4><%= column.description %></h4>
+      </div>
+    <% end %>
+  <% end %>
+</div>
