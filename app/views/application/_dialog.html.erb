@@ -1,0 +1,6 @@
+<dialog class="dialog" data-controller="dialog" data-dialog-open-class="dialog--open">
+  <%= link_to "Close Dialog", "#", data: { action: "dialog#close", dialog_switch_url_value: project_board_path(@project, @board) } %>
+  <%= turbo_frame_tag "dialog_content", data: { dialog_target: 'content' } do %>
+    <h1>Dialog</h1>
+  <% end %>
+</dialog>

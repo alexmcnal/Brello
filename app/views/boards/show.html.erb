@@ -1,12 +1,5 @@
 <%= turbo_stream_from dom_id(@project, :board) %>
 
-<div class="drawer" data-controller="drawer" data-drawer-open-class="drawer--open">
-  <%= link_to "Close Drawer", "#", data: { controller: "drawer", action: "drawer#close", drawer_switch_url_value: project_board_path(@project, @board) } %>
-  <%= turbo_frame_tag "drawer_content", data: { drawer_target: 'content' } do %>
-    <h1>Drawer Content</h1>
-  <% end %>
-</div>
-
 <h1>SHOW PAGE<h1>
 <h2><%= @board.name %></h2>
 <h3><%= @board.description %></h3>
@@ -14,7 +7,7 @@
 
 <div class="toolbar">
   <h1>Brello</h1>
-  <%= link_to "Add Card", new_project_board_card_path(@project, @board), class: "button__primary" %>
+  <%= link_to "Add Card", new_project_board_card_path(@project, @board), class: "button__primary", data: { controller: "dialog", action: "dialog#open" }%>
   <%= link_to "Add Column", new_project_board_board_column_path(@project, @board), class: "button__primary" %>
 </div>
 

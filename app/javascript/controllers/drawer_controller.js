@@ -7,6 +7,7 @@ export default class extends Controller {
   static classes = [ 'open']
 
   open(e) {
+    console.log("Drawer Open")
     e.preventDefault()
     const openDrawerEvent = new CustomEvent("openDrawer", {
       bubbles: true,
@@ -47,8 +48,11 @@ export default class extends Controller {
   }
 
   handleOpenDrawer(event) {
+    console.log("Handle drawer open")
     this.element.classList.add(this.openClass)
-    this.contentTarget.src = event.detail.url
+    requestAnimationFrame(() => { 
+      this.contentTarget.src = event.detail.url
+    })
   }
 
   handleCloseDrawer() {

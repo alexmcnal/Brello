@@ -9,7 +9,7 @@
 
   <%= link_to project_board_card_path(project, board, card),
               class: "card__title", 
-              data: { controller: "drawer", action: "drawer#open" } do %>
+              data: { controller: "drawer", action: "drawer#open", turbo_prefetch: false } do %>
     <%= card.title %>
   <% end %>
 
