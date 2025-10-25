@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(@column, :board), class: 'content' do %>
+    <%= content_tag :div, id: dom_id(column), class: "card-container", data: { column_id: board_column.id, card_drag_target: 'column' } do %>
+      <% column.cards.by_position.each do |card| %>
+        <%= render 'cards/card', card: card, board: @board, project: @project %>
+      <% end %>
+    <% end %>
+<% end %>

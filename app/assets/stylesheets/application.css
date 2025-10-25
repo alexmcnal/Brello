@@ -95,3 +95,7 @@
   .drawer--open {
     transform: translateX(0);
   }
+
+  .content {
+    display: contents;
+  }

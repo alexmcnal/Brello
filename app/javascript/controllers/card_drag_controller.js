@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
+  static targets = [ 'column' ];
   static classes = [
     "dropTarget",
     "draggable",
@@ -9,7 +10,17 @@ export default class extends Controller {
     "handle",
   ];
 
+
   connect() {
+    this.connectSortable();
+  }
+
+  columnTargetConnected() {
+    this.disconnectSortable();
+    this.connectSortable();
+  }
+
+  connectSortable() {
     const Sortable = window.Draggable.Sortable;
 
     this.cardSortable = new Sortable(
@@ -34,7 +45,7 @@ export default class extends Controller {
     this.cardSortable.on("sortable:stop", this.handleCardStop.bind(this));
   }
 
-  disconnect() {
+  disconnectSortable() {
     this.cardSortable?.destroy();
   }
 

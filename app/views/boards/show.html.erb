@@ -47,19 +47,13 @@
 
     <% @board_columns.order(:position).each do |board_column| %>
       <% column = board_column.column %>
-      <div
-        class="board__column"
-        data-board-column-id="<%= board_column.id %>"
-      >
+      <div class="board__column" data-board-column-id="<%= board_column.id %>">
         <div class="board__column-header drag-handle">
           <h2 class="board__column-title"><%= column.name.titleize %></h2>
           <span class="drag-icon">⠿</span>
         </div>
-
-        <%= content_tag :div, id: dom_id(column), class: "card-container", data: { column_id: board_column.id } do %>
-          <% column.cards.by_position.each do |card| %>
-            <%= render card, board: @board, project: @project %>
-          <% end %>
+        <%= turbo_frame_tag dom_id(column, :board), src: project_board_column_path(@project, @board, column), class: 'content' do %>
+          Loading...
         <% end %>
       </div>
     <% end %>
