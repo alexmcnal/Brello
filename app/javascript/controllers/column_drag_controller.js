@@ -1,7 +1,10 @@
 import { Controller } from "@hotwired/stimulus";
 
+const DEFAULT_DRAGGABLE_SELECTOR = ".board__column";
+const DEFAULT_HANDLE_SELECTOR = ".drag-icon";
+const DEFAULT_DRAGGING_CLASS = "board__column--dragging";
+
 export default class extends Controller {
-  static classes = ["draggable", "dragging", "handle"];
 
   connect() {
     const Sortable = window.Draggable.Sortable;
@@ -9,18 +12,22 @@ export default class extends Controller {
     // Target all .board containers
     const boards = this.element.querySelectorAll(".board");
 
+    const draggableSelector = DEFAULT_DRAGGABLE_SELECTOR;
+    const handleSelector = DEFAULT_HANDLE_SELECTOR;
+    const draggingClass = DEFAULT_DRAGGING_CLASS;
+
     this.columnSortable = new Sortable(boards, {
-      draggable: ".board__column",
-      handle: ".drag-icon",
+      draggable: draggableSelector,
+      handle: handleSelector,
       mirror: { constrainDimensions: true },
     });
 
     this.columnSortable.on("drag:start", (event) => {
-      event.source.classList.add(this.draggingClass || "board__column--dragging");
+      event.source.classList.add(draggingClass);
     });
 
     this.columnSortable.on("drag:stop", (event) => {
-      event.source.classList.remove(this.draggingClass || "board__column--dragging");
+      event.source.classList.remove(draggingClass);
     });
 
     this.columnSortable.on("sortable:stop", this.handleColumnStop.bind(this));
@@ -31,9 +38,7 @@ export default class extends Controller {
   }
 
   findForm() {
-    const formId = this.element.dataset.dragFormId;
-    if (!formId) return null;
-    return document.getElementById(formId);
+    return document.getElementById('columns-form');
   }
 
   addCsrfToken(headers) {
