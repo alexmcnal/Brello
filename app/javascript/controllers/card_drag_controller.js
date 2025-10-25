@@ -1,4 +1,12 @@
+// CardDragController for managing card drag and drop behavior
+//
+// Usage:
+//   <div data-controller="card-drag">
+//     <!-- card content -->
+//   </div>
+
 import { Controller } from "@hotwired/stimulus";
+import { moveCard } from "helpers/card_helper";
 
 const dropTargetSelector = ".card-container";
 const draggableSelector = ".card";
@@ -51,28 +59,19 @@ export default class extends Controller {
     this.cardSortable?.destroy();
   }
 
+  // This is where the magic happens! When a card drag operation completes,
+  // we extract the relevant data and call cardMoved() to keep the save logic
+  // completely decoupled from the drag implementation. 
   async handleCardStop(event) {
-    const { newContainer, newIndex, oldContainer, oldIndex } = event;
+    const { newContainer, newIndex, oldContainer, oldIndex, dragEvent } = event;
+    const source = dragEvent.source;
     if (newContainer === oldContainer && newIndex === oldIndex) return;
 
-    const source = event.dragEvent.source;
-    const updateUrl = source.dataset.updateUrl;
+    const toColumnId = newContainer.dataset.columnId;
+    const toPosition = newIndex + 1;
+    const cardId = source.dataset.cardId;
 
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-
-    const body = new URLSearchParams();
-    body.append("card[column_id]", newContainer.dataset.columnId);
-    body.append("card[position]", newIndex + 1);
-
-    await fetch(updateUrl, {
-      method: "PATCH",
-      headers: {
-        "X-CSRF-Token": csrfToken,
-        "Content-Type": "application/x-www-form-urlencoded",
-        Accept: "application/json",
-      },
-      body: body.toString(),
-    });
+    moveCard(cardId, toColumnId, toPosition)
   }
 
   showInsertionIndicator(event) {

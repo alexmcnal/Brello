@@ -10,6 +10,7 @@ import { openDrawer } from "helpers/drawer_helper"
 
 export default class extends Controller {
 
+  static targets = [ 'form' ]
 
   connect() {
     this.handleOpenCard = this.handleOpenCard.bind(this)

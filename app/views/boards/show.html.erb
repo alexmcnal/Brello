@@ -7,9 +7,18 @@
   <%= link_to "Add Column", new_project_board_board_column_path(@project, @board), class: "button__primary" %>
 </div>
 
+<!-- Hidden form for updating cards -->
+<%= form_for :card, url: '/cards/:id', method: :patch,
+              data: { controller: "board--card-move", action: "board--card-move#handleMoveCard" }, class: 'hidden' do |form| %>
+  <%= form.hidden_field :column_id, data: { board__card_move_target: 'columnIdInput' } %>
+  <%= form.hidden_field :position, data: { board__card_move_target: 'positionInput' } %>
+  <%= hidden_field_tag :board_id, @board.id %>
+  <%= form.submit "Update Card" %>
+<% end %> 
+
 <div
   class="board-wrapper"
-  data-controller="column-drag board"
+  data-controller="xcolumn-drag board"
   data-project-id="<%= @project.id %>"
   data-board-id="<%= @board.id %>"
 >
@@ -17,13 +26,6 @@
     class="board"
     data-controller="card-drag"
   >
-    <!-- Hidden form for updating cards -->
-    <%= form_for :card, url: '/cards/id', method: :patch,
-                 data: { turbo: false }, id: 'cards-form', class: 'hidden' do |form| %>
-      <%= form.text_field :column_id %>
-      <%= hidden_field_tag :board_id, @board.id %>
-      <%= form.submit "Update Card" %>
-    <% end %>
 
     <!-- Hidden form for updating columns -->
     <%= form_for :board_column, url: '/board_columns/id', method: :patch,
@@ -36,9 +38,8 @@
     <% @board_columns.order(:position).each do |board_column| %>
       <% column = board_column.column %>
       <div class="board__column" data-column-id="<%= column.id %>" data-board-column-id="<%= board_column.id %>">
-        <div class="board__column-header drag-handle">
+        <div class="board__column-header drag-handle drag-icon">
           <h2 class="board__column-title"><%= column.name.titleize %></h2>
-          <span class="drag-icon">⠿</span>
         </div>
         <%= turbo_frame_tag dom_id(column, :board), src: project_board_column_path(@project, @board, column), class: 'content' do %>
           Loading...

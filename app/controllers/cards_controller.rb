@@ -78,17 +78,17 @@ class CardsController < ApplicationController
       # redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
       respond_to do |format|
         format.html { head :ok }
-        # format.html { redirect_to project_board_path(@project, @board), notice: "Card updated successfully" }
         format.turbo_stream { 
-          board_column = BoardColumn.find_by(column: @card.column, board: @board)
-        
           Turbo::StreamsChannel.broadcast_replace_to(
-            dom_id(@card.column, :board),
-            target: dom_id(@card.column),
-            partial: "boards/columns/column",
-            locals: { column: @card.column, board_column: board_column }
+            'cards',
+            target: dom_id(@card),
+            partial: "cards/card",
+            locals: { card: @card }
           )
-          head :ok
+
+          render turbo_stream: [
+            update_card(@card),
+          ]
         }
         format.json { head :ok }
       end
@@ -112,4 +112,7 @@ class CardsController < ApplicationController
     params.require(:card).permit(:title, :description, :column_id, :status, :position)
   end
 
+  def update_card(card)
+    turbo_stream.replace(dom_id(card), partial: "cards/card", locals: { card: })
+  end
 end
