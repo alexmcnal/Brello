@@ -80,11 +80,13 @@ class CardsController < ApplicationController
         format.html { head :ok }
         # format.html { redirect_to project_board_path(@project, @board), notice: "Card updated successfully" }
         format.turbo_stream { 
+          board_column = BoardColumn.find_by(column: @card.column, board: @board)
+        
           Turbo::StreamsChannel.broadcast_replace_to(
             dom_id(@card.column, :board),
             target: dom_id(@card.column),
             partial: "boards/columns/column",
-            locals: { column: @card.column, board_column: @card.column.board_column }
+            locals: { column: @card.column, board_column: board_column }
           )
           head :ok
         }

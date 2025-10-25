@@ -9,7 +9,7 @@
 
 <div
   class="board-wrapper"
-  data-controller="column-drag"
+  data-controller="column-drag board"
   data-project-id="<%= @project.id %>"
   data-board-id="<%= @board.id %>"
   data-column-drag-draggable-class=".board__column"
@@ -45,7 +45,7 @@
 
     <% @board_columns.order(:position).each do |board_column| %>
       <% column = board_column.column %>
-      <div class="board__column" data-board-column-id="<%= board_column.id %>">
+      <div class="board__column" data-column-id="<%= column.id %>" data-board-column-id="<%= board_column.id %>">
         <div class="board__column-header drag-handle">
           <h2 class="board__column-title"><%= column.name.titleize %></h2>
           <span class="drag-icon">⠿</span>
