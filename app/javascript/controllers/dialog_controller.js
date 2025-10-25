@@ -1,6 +1,25 @@
-import { Controller } from "@hotwired/stimulus"
+// Dialog controller for managing modal dialog UI component
+//
+// Usage:
+//   <dialog data-controller="dialog" data-dialog-open-class="dialog--open">
+//     <div data-dialog-target="content"></div>
+//   </dialog>
+//
+//   <!-- Trigger dialog open with a link -->
+//   <a href="/path/to/content" data-action="click->dialog#open">Open Dialog</a>
+//
+//   <!-- Close dialog -->
+//   <button data-action="click->dialog#close">Close</button>
+//
+// The controller listens for custom 'openDialog' and 'closeDialog' events
+// dispatched by the dialog helper functions. It manages the dialog's open/closed
+// state via CSS classes and loads content via Turbo frames.
+//
+// Keyboard support: ESC key closes the dialog when open.
 
-// Connects to data-controller="drawer"
+import { Controller } from "@hotwired/stimulus"
+import { openDialog, closeDialog } from "helpers/dialog_helper"
+
 export default class extends Controller {
 
   static targets = [ 'content' ]
@@ -8,25 +27,11 @@ export default class extends Controller {
 
   open(e) {
     e.preventDefault()
-    const openDialogEvent = new CustomEvent("openDialog", {
-      bubbles: true,
-      detail: {
-        url: this.element.href
-      },
-    })
-
-    this.element.dispatchEvent(openDialogEvent)
+    openDialog(this.element.href)
   }
 
   close() {
-    const closeDialogEvent = new CustomEvent("closeDialog", {
-      bubbles: true,
-      detail: {
-        name: "close dialog",
-      },
-    })
-
-    this.element.dispatchEvent(closeDialogEvent)
+    closeDialog()
   }
 
   contentTargetConnected() {
