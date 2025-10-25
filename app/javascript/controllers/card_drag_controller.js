@@ -1,14 +1,13 @@
 import { Controller } from "@hotwired/stimulus";
 
+const dropTargetSelector = ".card-container";
+const draggableSelector = ".card";
+const handleSelector = ".card";
+const draggingClassName = "card--dragging";
+const dropIndicatorClassName = "drop-indicator";
+
 export default class extends Controller {
   static targets = [ 'column' ];
-  static classes = [
-    "dropTarget",
-    "draggable",
-    "dragging",
-    "dropIndicator",
-    "handle",
-  ];
 
 
   connect() {
@@ -23,21 +22,24 @@ export default class extends Controller {
   connectSortable() {
     const Sortable = window.Draggable.Sortable;
 
+    this.draggingClassName = draggingClassName;
+    this.dropIndicatorClassName = dropIndicatorClassName;
+
     this.cardSortable = new Sortable(
-      this.element.querySelectorAll(this.dropTargetClass), // .card-container
+      this.element.querySelectorAll(dropTargetSelector),
       {
-        draggable: this.draggableClass,
-        handle: this.handleClass,
+        draggable: draggableSelector,
+        handle: handleSelector,
         mirror: { constrainDimensions: true },
       }
     );
 
     this.cardSortable.on("drag:start", (event) => {
-      event.source.classList.add(this.draggingClass);
+      event.source.classList.add(this.draggingClassName);
     });
 
     this.cardSortable.on("drag:stop", (event) => {
-      event.source.classList.remove(this.draggingClass);
+      event.source.classList.remove(this.draggingClassName);
       this.removeInsertionIndicators();
     });
 
@@ -76,7 +78,7 @@ export default class extends Controller {
   showInsertionIndicator(event) {
     this.removeInsertionIndicators();
     const indicator = document.createElement("div");
-    indicator.classList.add(this.dropIndicatorClass);
+    indicator.classList.add(this.dropIndicatorClassName);
 
     const sibling = event.over;
     const parent = sibling?.parentNode;
@@ -86,6 +88,6 @@ export default class extends Controller {
   }
 
   removeInsertionIndicators() {
-    document.querySelectorAll(`.${this.dropIndicatorClass}`).forEach((el) => el.remove());
+    document.querySelectorAll(`.${this.dropIndicatorClassName}`).forEach((el) => el.remove());
   }
 }

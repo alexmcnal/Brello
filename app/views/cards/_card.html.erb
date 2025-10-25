@@ -6,7 +6,7 @@
   } do %>
 
   <%= button_tag class: "card__title", type: "button",
-              data: { action: "board#openCard" } do %>
+              data: { controller: "card", action: "card#open" } do %>
     <%= card.title %>
   <% end %>
 

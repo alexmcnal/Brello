@@ -10,16 +10,20 @@ import { openDrawer } from "helpers/drawer_helper"
 
 export default class extends Controller {
 
+
   connect() {
-    // Controller connected
+    this.handleOpenCard = this.handleOpenCard.bind(this)
+    document.addEventListener('openCard', this.handleOpenCard)
   }
 
   disconnect() {
-    // Controller disconnected
+    document.removeEventListener('openCard', this.handleOpenCard)
   }
 
-  openCard(event) {
-    const target = event.currentTarget
+  handleOpenCard(event) {
+    event.preventDefault()
+
+    const target = event.target
     const cardId = target.closest('[data-card-id]').dataset.cardId
     const boardId = target.closest('[data-board-id]').dataset.boardId
     const projectId = target.closest('[data-project-id]').dataset.projectId

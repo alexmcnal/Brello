@@ -1,8 +1,8 @@
 import { Controller } from "@hotwired/stimulus";
 
-const DEFAULT_DRAGGABLE_SELECTOR = ".board__column";
-const DEFAULT_HANDLE_SELECTOR = ".drag-icon";
-const DEFAULT_DRAGGING_CLASS = "board__column--dragging";
+const draggableSelector = ".board__column";
+const handleSelector = ".drag-icon";
+const draggingClass = "board__column--dragging";
 
 export default class extends Controller {
 
@@ -12,9 +12,7 @@ export default class extends Controller {
     // Target all .board containers
     const boards = this.element.querySelectorAll(".board");
 
-    const draggableSelector = DEFAULT_DRAGGABLE_SELECTOR;
-    const handleSelector = DEFAULT_HANDLE_SELECTOR;
-    const draggingClass = DEFAULT_DRAGGING_CLASS;
+    // Use controller-wide constants
 
     this.columnSortable = new Sortable(boards, {
       draggable: draggableSelector,

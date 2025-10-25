@@ -52,10 +52,6 @@ export default class extends Controller {
   }
 
   handleOpenDialog(event) {
-    // this.element.openDialog
-    // Read the mdn dialog page and it will tell you what function to call to open the dialog
-    console.log('handle open dialog')
-    
     requestAnimationFrame(() => { 
       this.contentTarget.src = event.detail.url
     })

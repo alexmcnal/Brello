@@ -16,11 +16,6 @@
   <div
     class="board"
     data-controller="card-drag"
-    data-card-drag-drop-target-class=".card-container"
-    data-card-drag-draggable-class=".card"
-    data-card-drag-dragging-class="card--dragging"
-    data-card-drag-drop-indicator-class="drop-indicator"
-    data-card-drag-handle-class=".card"
   >
     <!-- Hidden form for updating cards -->
     <%= form_for :card, url: '/cards/id', method: :patch,
