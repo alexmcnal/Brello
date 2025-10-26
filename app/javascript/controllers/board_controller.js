@@ -10,10 +10,9 @@ import { openDrawer } from "helpers/drawer_helper"
 
 export default class extends Controller {
 
-  static targets = [ 'form' ]
-
   connect() {
     this.handleOpenCard = this.handleOpenCard.bind(this)
+    
     document.addEventListener('openCard', this.handleOpenCard)
   }
 
@@ -32,4 +31,5 @@ export default class extends Controller {
     const url = `/projects/${projectId}/boards/${boardId}/cards/${cardId}`
     openDrawer(url)
   }
+
 }

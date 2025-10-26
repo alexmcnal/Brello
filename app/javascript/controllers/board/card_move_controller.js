@@ -20,8 +20,6 @@ export default class extends Controller {
   }
 
   handleMoveCard(event) {
-    event.stopPropagation()
-
     const { cardId, toColumnId, toPosition } = event.detail
 
     this.columnIdInputTarget.value = toColumnId

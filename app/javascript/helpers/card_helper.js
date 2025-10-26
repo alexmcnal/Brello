@@ -1,5 +1,5 @@
 export function moveCard(cardId, toColumnId, toPosition) {
-  const cardMovedEvent = new CustomEvent("moveCard", {
+  const moveCardEvent = new CustomEvent("moveCard", {
     bubbles: true,
     detail: {
       cardId: cardId,
@@ -8,5 +8,17 @@ export function moveCard(cardId, toColumnId, toPosition) {
     }
   })
 
-  document.dispatchEvent(cardMovedEvent)
+  document.dispatchEvent(moveCardEvent)
+}
+
+export function cardUpdated(dom_id, card) {
+  const cardUpdatedEvent = new CustomEvent("cardUpdated", {
+    bubbles: false,
+    detail: {
+      dom_id: dom_id,
+      card: card
+    }
+  })
+
+  document.dispatchEvent(cardUpdatedEvent)
 }

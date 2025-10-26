@@ -16,6 +16,8 @@
   <%= form.submit "Update Card" %>
 <% end %> 
 
+<%= turbo_stream_from @board.project %>
+
 <div
   class="board-wrapper"
   data-controller="xcolumn-drag board"

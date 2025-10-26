@@ -6,6 +6,7 @@ class Card < ApplicationRecord
   
   has_many :actions
   belongs_to :column
+  has_one :project, through: :column
   acts_as_list scope: [ :column_id ]
   
   scope :by_position, -> { order(position: :asc) }

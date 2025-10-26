@@ -1,4 +1,4 @@
-<%= content_tag :div, id: dom_id(column), class: "card-container", data: { column_id: board_column.id, card_drag_target: 'column' } do %>
+<%= content_tag :div, id: dom_id(column), class: "card-container", data: { column_id: column.id, card_drag_target: 'column', controller: 'column' } do %>
   <% column.cards.by_position.each do |card| %>
     <%= render 'cards/card', card: card, board: @board, project: @project %>
   <% end %>

@@ -79,16 +79,24 @@ class CardsController < ApplicationController
       respond_to do |format|
         format.html { head :ok }
         format.turbo_stream { 
-          Turbo::StreamsChannel.broadcast_replace_to(
-            'cards',
-            target: dom_id(@card),
-            partial: "cards/card",
-            locals: { card: @card }
-          )
+          # render turbo_stream: [
+          #   update_card(@card),
+          # ]
 
-          render turbo_stream: [
-            update_card(@card),
-          ]
+          head :ok
+
+          # Turbo::StreamsChannel.broadcast_replace_to(
+          #   @card.project,
+          #   target: dom_id(@card),
+          #   partial: "cards/card",
+          #   locals: { card: @card }
+          # )
+
+          ActionCable.server.broadcast('cards', {
+            action: 'cardUpdated',
+            card: @card,
+            dom_id: dom_id(@card)
+          })
         }
         format.json { head :ok }
       end
