@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_current_request_details
   before_action :authenticate
+  before_action :set_cable_client_id
 
   helper_method :current_user
 
@@ -28,5 +29,9 @@ class ApplicationController < ActionController::Base
 
   def close_dialog
     turbo_stream.replace('dialog', partial: 'dialog')
+  end
+
+  def set_cable_client_id
+    @cable_client_id = request.headers["X-Cable-Client-Id"]
   end
 end
