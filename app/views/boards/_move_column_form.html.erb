@@ -1,0 +1,6 @@
+<%= form_for :board_column, url: '/board_columns/id', method: :patch,
+              data: { turbo: false }, id: 'columns-form', class: 'hidden' do |form| %>
+  <%= form.text_field :position %>
+  <%= hidden_field_tag :board_id, @board.id %>
+  <%= form.submit "Update Column" %>
+<% end %>

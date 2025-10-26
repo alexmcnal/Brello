@@ -1,0 +1,7 @@
+<%= form_for :card, url: '/cards/:id', method: :patch,
+              data: { controller: "board--card-move", action: "board--card-move#handleMoveCard" }, class: 'hidden' do |form| %>
+  <%= form.hidden_field :column_id, data: { board__card_move_target: 'columnIdInput' } %>
+  <%= form.hidden_field :position, data: { board__card_move_target: 'positionInput' } %>
+  <%= hidden_field_tag :board_id, @board.id %>
+  <%= form.submit "Update Card" %>
+<% end %> 
