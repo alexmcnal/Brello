@@ -29,6 +29,8 @@ class ApplicationController < ActionController::Base
 
   def close_dialog
     turbo_stream.replace('dialog', partial: 'dialog')
+    # turbo_stream.custom_action :close_dialog
+
   end
 
   def set_cable_client_id

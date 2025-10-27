@@ -38,9 +38,10 @@ class CardsController < ApplicationController
         format.turbo_stream {
           render turbo_stream: [
             close_dialog,
-            turbo_stream.append(dom_id(@card.column), partial: 'card', locals: { card: @card, board: @board, project: @project })
-          ]        
+            update_column(@card.column)
+          ]
         }
+        broadcast_card_updated(@card)
       end
     else
       @available_columns = @board.columns
@@ -75,23 +76,15 @@ class CardsController < ApplicationController
         )
       end
 
-      # redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
       respond_to do |format|
         format.html { head :ok }
         format.turbo_stream { 
-          render turbo_stream: [
-            update_card(@card),
-          ]
-
-          ActionCable.server.broadcast('cards', {
-            action: 'cardUpdated',
-            card: @card,
-            dom_id: dom_id(@card),
-            additional_data: { source_id: @cable_client_id }
-          })
+          render turbo_stream: update_card(@card)
         }
         format.json { head :ok }
       end
+
+      broadcast_card_updated(@card)
     else
       @available_columns = @board.columns
       render :edit
@@ -114,5 +107,18 @@ class CardsController < ApplicationController
 
   def update_card(card)
     turbo_stream.replace(dom_id(card), partial: "cards/card", locals: { card: })
+  end
+
+  def update_column(column)
+    turbo_stream.replace(dom_id(column), partial: "columns/column", locals: { column: })
+  end
+
+  def broadcast_card_updated(card)
+    ActionCable.server.broadcast('cards', {
+      action: 'cardUpdated',
+      card: card,
+      dom_id: dom_id(card),
+      additional_data: { source_id: @cable_client_id }
+    })
   end
 end

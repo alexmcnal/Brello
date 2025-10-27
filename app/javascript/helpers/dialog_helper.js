@@ -33,3 +33,9 @@ export function closeDialog() {
 
   document.dispatchEvent(closeDialogEvent)
 }
+
+import { Turbo } from "@hotwired/turbo-rails"
+
+Turbo.StreamActions.close_dialog = function() {
+  closeDialog()
+}

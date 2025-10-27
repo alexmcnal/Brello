@@ -1,0 +1,29 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer--open {
+  transform: translateX(0);
+}
+
+.drawer__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0.5rem;
+
+  &:hover {
+    background-color: var(--color-very-extra-light-grey);
+  }
+}

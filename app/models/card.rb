@@ -2,10 +2,9 @@ class Card < ApplicationRecord
   STATUSES = [ "todo", "in_progress", "done" ]
 
   validates :title, presence: true
-
   
   has_many :actions
-  belongs_to :column
+  belongs_to :column, touch: true
   has_one :project, through: :column
   acts_as_list scope: [ :column_id ]
   

@@ -3,6 +3,8 @@ class ColumnsController < ApplicationController
   def show
     @project = Project.find(params[:project_id])
     @column = @project.columns.find(params[:id])
+
+    expires_in 7.days, public: true
   end
 
   def new

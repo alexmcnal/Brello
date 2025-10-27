@@ -1,8 +1,12 @@
 <dialog id="dialog" class="dialog" data-controller="dialog" data-dialog-open-class="dialog--open">
   <form method="dialog">
-    <button>Close</button>
+    <%= button_tag type: "submit", class: "dialog__close" do %>
+      <i class="heroicon-x-mark"></i>
+    <% end %>
   </form>
   <%= turbo_frame_tag "dialog_content", data: { dialog_target: 'content' } do %>
     <h1>Dialog</h1>
   <% end %>
 </dialog>
+
+

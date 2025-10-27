@@ -96,6 +96,20 @@
     transform: translateX(0);
   }
 
+  .drawer__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0.5rem;
+
+    &:hover {
+      background-color: var(--color-very-extra-light-grey);
+    }
+  }
+
   .content {
     display: contents;
   }
