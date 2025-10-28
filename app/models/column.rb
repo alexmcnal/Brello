@@ -6,4 +6,22 @@ class Column < ApplicationRecord
   belongs_to :project
 
   validates :name, presence: true
+
+  after_touch :broadcast_column_updated
+
+  private
+
+  def broadcast_column_updated
+    Turbo::StreamsChannel.broadcast_action_to(
+      project,
+      action: 'object_updated',
+      attributes: { 
+        id:, 
+        type: self.class.name.downcase, 
+        cache_key: self.cache_key,
+        fingerprint: self.fingerprint
+      },
+      render: false
+    )
+  end
 end

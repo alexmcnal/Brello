@@ -13,14 +13,14 @@ class CardsController < ApplicationController
   def new
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:board_id])
-    @card = Card.new
+    @card = Forms::CreateCard.new
     @available_columns = @board.columns
   end
 
   def create
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:board_id])
-    @card = Card.build(card_params)
+    @card = Forms::CreateCard.new(card_params)
     if @card.save
 
       Action.create!(
@@ -84,7 +84,7 @@ class CardsController < ApplicationController
         format.json { head :ok }
       end
 
-      broadcast_card_updated(@card)
+      # broadcast_card_updated(@card)
     else
       @available_columns = @board.columns
       render :edit

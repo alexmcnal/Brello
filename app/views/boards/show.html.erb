@@ -45,7 +45,10 @@
         <div class="board__column-header drag-handle drag-icon">
           <h2 class="board__column-title"><%= column.name.titleize %></h2>
         </div>
-        <%= turbo_frame_tag dom_id(column, :board), src: project_board_column_path(@project, @board, column), class: 'content' do %>
+        <%= auto_refresh_turbo_frame_tag dom_id(column, :board),
+                            object: column,
+                            src: project_board_column_path(@project, @board, column), 
+                            class: 'content' do %>
           Loading...
         <% end %>
       </div>
