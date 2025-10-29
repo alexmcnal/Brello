@@ -41,7 +41,7 @@ services:
     pid: host
 
   assets:
-    image: dmcnally/tournament-manager:development-${APP_VERSION}
+    image: dmcnally/common-ruby:development-${APP_VERSION}
     command: rake dartsass:watch
     volumes:
       - .:/app

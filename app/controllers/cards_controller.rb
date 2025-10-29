@@ -13,14 +13,14 @@ class CardsController < ApplicationController
   def new
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:board_id])
-    @card = Card.new
+    @card = Forms::CreateCard.new
     @available_columns = @board.columns
   end
 
   def create
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:board_id])
-    @card = Card.build(card_params)
+    @card = Forms::CreateCard.new(card_params)
     if @card.save
 
       Action.create!(
@@ -32,7 +32,17 @@ class CardsController < ApplicationController
           description: @card.description
         }
       )
-      redirect_to project_board_path(@project, @board)
+
+      respond_to do |format|
+        format.html { redirect_to project_board_path(@project, @board) }
+        format.turbo_stream {
+          render turbo_stream: [
+            close_dialog,
+            update_column(@card.column)
+          ]
+        }
+        broadcast_card_updated(@card)
+      end
     else
       @available_columns = @board.columns
       render :new, status: :unprocessable_entity
@@ -66,19 +76,15 @@ class CardsController < ApplicationController
         )
       end
 
-      # redirect_to project_board_path(@project, @board), notice: "Card updated successfully"
       respond_to do |format|
-        format.html { redirect_to project_board_path(@project, @board), notice: "Card updated successfully" }
+        format.html { head :ok }
         format.turbo_stream { 
-          Turbo::StreamsChannel.broadcast_replace_to(
-            dom_id(@project, :board),
-            target: dom_id(@card, :board),
-            partial: "cards/card",
-            locals: { card: @card, board: @board, project: @project }
-          )
-          head :ok
+          render turbo_stream: update_card(@card)
         }
+        format.json { head :ok }
       end
+
+      # broadcast_card_updated(@card)
     else
       @available_columns = @board.columns
       render :edit
@@ -97,5 +103,22 @@ class CardsController < ApplicationController
 
   def card_params
     params.require(:card).permit(:title, :description, :column_id, :status, :position)
+  end
+
+  def update_card(card)
+    turbo_stream.replace(dom_id(card), partial: "cards/card", locals: { card: })
+  end
+
+  def update_column(column)
+    turbo_stream.replace(dom_id(column), partial: "columns/column", locals: { column: })
+  end
+
+  def broadcast_card_updated(card)
+    ActionCable.server.broadcast('cards', {
+      action: 'cardUpdated',
+      card: card,
+      dom_id: dom_id(card),
+      additional_data: { source_id: @cable_client_id }
+    })
   end
 end

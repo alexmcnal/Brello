@@ -26,14 +26,14 @@ Rails.application.routes.draw do
   resource :dashboard, only: [ :show ]
   resources :projects do
     resources :boards do
-      resources :cards, only: [ :show, :new, :create, :edit, :update, :destroy ]
-      resources :board_columns
+      resources :cards, only: [ :show, :new, :create, :edit, :update ]
+      resources :columns, only: [ :show ], controller: 'boards/columns'
+      resources :board_columns # Is this for adding and remove columns from a board?
     end
     resources :columns
   end
   resources :board_columns, only: [:update]
 
   resources :actions, only: [ :index ]
-  
-  
+  resources :cards, only: [ :update ]
 end

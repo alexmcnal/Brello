@@ -23,6 +23,7 @@
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
     <link rel="icon" href="/icon.png" type="image/png">
+
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
@@ -30,9 +31,12 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
     <%= javascript_importmap_tags %>
+    <%= turbo_refreshes_with method: :morph %>
   </head>
 
   <body>
+    <%= render 'dialog' %>
+    <%= render 'drawer' %>
     <%= yield %>
   </body>
 </html>

@@ -1,32 +1,53 @@
+// CardDragController for managing card drag and drop behavior
+//
+// Usage:
+//   <div data-controller="card-drag">
+//     <!-- card content -->
+//   </div>
+
 import { Controller } from "@hotwired/stimulus";
+import { moveCard } from "helpers/card_helper";
+
+const dropTargetSelector = ".card-container";
+const draggableSelector = ".card";
+const handleSelector = ".card";
+const draggingClassName = "card--dragging";
+const dropIndicatorClassName = "drop-indicator";
 
 export default class extends Controller {
-  static classes = [
-    "dropTarget",
-    "draggable",
-    "dragging",
-    "dropIndicator",
-    "handle",
-  ];
+  static targets = [ 'column' ];
+
 
   connect() {
+    this.connectSortable();
+  }
+
+  columnTargetConnected() {
+    this.disconnectSortable();
+    this.connectSortable();
+  }
+
+  connectSortable() {
     const Sortable = window.Draggable.Sortable;
 
+    this.draggingClassName = draggingClassName;
+    this.dropIndicatorClassName = dropIndicatorClassName;
+
     this.cardSortable = new Sortable(
-      this.element.querySelectorAll(this.dropTargetClass), // .card-container
+      this.element.querySelectorAll(dropTargetSelector),
       {
-        draggable: this.draggableClass,
-        handle: this.handleClass,
+        draggable: draggableSelector,
+        handle: handleSelector,
         mirror: { constrainDimensions: true },
       }
     );
 
     this.cardSortable.on("drag:start", (event) => {
-      event.source.classList.add(this.draggingClass);
+      event.source.classList.add(this.draggingClassName);
     });
 
     this.cardSortable.on("drag:stop", (event) => {
-      event.source.classList.remove(this.draggingClass);
+      event.source.classList.remove(this.draggingClassName);
       this.removeInsertionIndicators();
     });
 
@@ -34,38 +55,29 @@ export default class extends Controller {
     this.cardSortable.on("sortable:stop", this.handleCardStop.bind(this));
   }
 
-  disconnect() {
+  disconnectSortable() {
     this.cardSortable?.destroy();
   }
 
+  // This is where the magic happens! When a card drag operation completes,
+  // we extract the relevant data and call cardMoved() to keep the save logic
+  // completely decoupled from the drag implementation. 
   async handleCardStop(event) {
-    const { newContainer, newIndex, oldContainer, oldIndex } = event;
+    const { newContainer, newIndex, oldContainer, oldIndex, dragEvent } = event;
+    const source = dragEvent.source;
     if (newContainer === oldContainer && newIndex === oldIndex) return;
 
-    const source = event.dragEvent.source;
-    const updateUrl = source.dataset.updateUrl;
+    const toColumnId = newContainer.dataset.columnId;
+    const toPosition = newIndex + 1;
+    const cardId = source.dataset.cardId;
 
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-
-    const body = new URLSearchParams();
-    body.append("card[column_id]", newContainer.dataset.columnId);
-    body.append("card[position]", newIndex + 1);
-
-    await fetch(updateUrl, {
-      method: "PATCH",
-      headers: {
-        "X-CSRF-Token": csrfToken,
-        "Content-Type": "application/x-www-form-urlencoded",
-        Accept: "application/json",
-      },
-      body: body.toString(),
-    });
+    moveCard(cardId, toColumnId, toPosition)
   }
 
   showInsertionIndicator(event) {
     this.removeInsertionIndicators();
     const indicator = document.createElement("div");
-    indicator.classList.add(this.dropIndicatorClass);
+    indicator.classList.add(this.dropIndicatorClassName);
 
     const sibling = event.over;
     const parent = sibling?.parentNode;
@@ -75,6 +87,6 @@ export default class extends Controller {
   }
 
   removeInsertionIndicators() {
-    document.querySelectorAll(`.${this.dropIndicatorClass}`).forEach((el) => el.remove());
+    document.querySelectorAll(`.${this.dropIndicatorClassName}`).forEach((el) => el.remove());
   }
 }

@@ -1,0 +1,29 @@
+.dialog {
+  border: 1px solid var(--color-black);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 32rem;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.5px);
+  }
+}
+
+.dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0.5rem;
+
+  &:hover {
+    background-color: var(--color-very-extra-light-grey);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

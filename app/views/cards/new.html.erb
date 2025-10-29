@@ -1,4 +1,4 @@
-<div class="card__background">
+<%= turbo_frame_tag "dialog_content" do %>
   <h1>New Card</h1>
   <%= render 'form' %>
-</div>
+<% end %>

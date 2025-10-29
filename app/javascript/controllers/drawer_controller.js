@@ -1,6 +1,25 @@
-import { Controller } from "@hotwired/stimulus"
+// Drawer controller for managing slide-out drawer UI component
+//
+// Usage:
+//   <div data-controller="drawer" data-drawer-open-class="drawer--open">
+//     <div data-drawer-target="content"></div>
+//   </div>
+//
+//   <!-- Trigger drawer open with a link -->
+//   <a href="/path/to/content" data-action="click->drawer#open">Open Drawer</a>
+//
+//   <!-- Close drawer -->
+//   <button data-action="click->drawer#close">Close</button>
+//
+// The controller listens for custom 'openDrawer' and 'closeDrawer' events
+// dispatched by the drawer helper functions. It manages the drawer's open/closed
+// state via CSS classes and loads content via Turbo frames.
+//
+// Keyboard support: ESC key closes the drawer when open.
 
-// Connects to data-controller="drawer"
+import { Controller } from "@hotwired/stimulus"
+import { openDrawer, closeDrawer } from "helpers/drawer_helper"
+
 export default class extends Controller {
 
   static targets = [ 'content' ]
@@ -8,29 +27,14 @@ export default class extends Controller {
 
   open(e) {
     e.preventDefault()
-    const openDrawerEvent = new CustomEvent("openDrawer", {
-      bubbles: true,
-      detail: {
-        url: this.element.href
-      },
-    })
-
-    this.element.dispatchEvent(openDrawerEvent)
+    openDrawer(this.element.href)
   }
 
   close() {
-    const closeDrawerEvent = new CustomEvent("closeDrawer", {
-      bubbles: true,
-      detail: {
-        name: "close drawer",
-      },
-    })
-
-    this.element.dispatchEvent(closeDrawerEvent)
+    closeDrawer()
   }
 
   contentTargetConnected() {
-    console.log("contentTargetConnected")
     this.handleOpenDrawer = this.handleOpenDrawer.bind(this)
     this.handleCloseDrawer = this.handleCloseDrawer.bind(this)
     this.handleEscape = this.handleEscape.bind(this)
@@ -48,7 +52,9 @@ export default class extends Controller {
 
   handleOpenDrawer(event) {
     this.element.classList.add(this.openClass)
-    this.contentTarget.src = event.detail.url
+    requestAnimationFrame(() => { 
+      this.contentTarget.src = event.detail.url
+    })
   }
 
   handleCloseDrawer() {

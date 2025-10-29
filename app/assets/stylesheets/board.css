@@ -5,11 +5,13 @@
 }
 
 .board-card {
-  background: #fff;
-  border: 1px solid #ddd;
+  --board-card-background-color: var(--color-white);
+  --board-card-radius: var(--border-radius-sm);
+  background: var(--board-card-background-color);
+  border: 1px solid var(--board-card-background-color);
   padding: 1rem;
   margin: 1rem;
-  border-radius: 0.3rem;
+  border-radius: var(--board-card-radius);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: box-shadow 0.2s ease;
   width: 24rem;
@@ -37,12 +39,17 @@
 }
 
 .board__column{
+  --column-background-color: var(--color-extra-light-grey);
+  --column-radius: var(--border-radius-sm);
+  --column-width: 24rem;
+  --column-padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: 100%;
+  border: 1px solid var(--column-background-color);
+  background-color: var(--column-background-color);
+  padding: var(--column-padding);
+  border-radius: var(--column-radius);
+  width: var(--column-width);
 }
 
 .board__column-title{

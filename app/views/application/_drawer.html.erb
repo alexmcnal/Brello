@@ -1,0 +1,8 @@
+<div class="drawer" data-controller="drawer" data-drawer-open-class="drawer--open">
+  <%= button_tag type: "button", class: "drawer__close", data: { controller: "drawer", action: "drawer#close" } do %>
+    <i class="heroicon-x-mark"></i>
+  <% end %>
+  <%= turbo_frame_tag "drawer_content", data: { drawer_target: 'content' } do %>
+    <h1>Drawer Content</h1>
+  <% end %>
+</div>

@@ -3,6 +3,8 @@ class ColumnsController < ApplicationController
   def show
     @project = Project.find(params[:project_id])
     @column = @project.columns.find(params[:id])
+
+    expires_in 7.days, public: true
   end
 
   def new
@@ -31,7 +33,7 @@ class ColumnsController < ApplicationController
     if @column.update(column_params)
       redirect_to project_path(@project), notice: "Column Updated"
     else
-      render :new, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 

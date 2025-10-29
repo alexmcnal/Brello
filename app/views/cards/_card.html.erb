@@ -1,15 +1,12 @@
 <%= content_tag :div, 
-  id: dom_id(card, :board),
+  id: dom_id(card),
   class: "card", 
   data: { 
-    controller: "card", 
-    update_url: project_board_card_path(project, board, card), 
     card_id: card.id 
   } do %>
 
-  <%= link_to project_board_card_path(project, board, card),
-              class: "card__title", 
-              data: { controller: "drawer", action: "drawer#open" } do %>
+  <%= button_tag class: "card__title", type: "button",
+              data: { controller: "card", action: "card#open" } do %>
     <%= card.title %>
   <% end %>
 
@@ -17,4 +14,7 @@
     <%= card.description %>
   </div>
 
+  <div class="card__number">
+    #<%= card.id %>
+  </div>
 <% end %>

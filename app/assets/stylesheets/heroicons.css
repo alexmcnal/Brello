@@ -1,0 +1,3566 @@
+/* Auto-generated Heroicons CSS classes */
+/* Run 'rake heroicons:generate_heroicons_css' to regenerate */
+
+.heroicon-academic-cap {
+  mask: url('heroicons/academic-cap.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/academic-cap.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-adjustments-horizontal {
+  mask: url('heroicons/adjustments-horizontal.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/adjustments-horizontal.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-adjustments-vertical {
+  mask: url('heroicons/adjustments-vertical.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/adjustments-vertical.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-archive-box-arrow-down {
+  mask: url('heroicons/archive-box-arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/archive-box-arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-archive-box-x-mark {
+  mask: url('heroicons/archive-box-x-mark.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/archive-box-x-mark.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-archive-box {
+  mask: url('heroicons/archive-box.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/archive-box.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down-circle {
+  mask: url('heroicons/arrow-down-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down-left {
+  mask: url('heroicons/arrow-down-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down-on-square-stack {
+  mask: url('heroicons/arrow-down-on-square-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down-on-square-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down-on-square {
+  mask: url('heroicons/arrow-down-on-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down-on-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down-right {
+  mask: url('heroicons/arrow-down-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down-tray {
+  mask: url('heroicons/arrow-down-tray.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down-tray.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-down {
+  mask: url('heroicons/arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-left-circle {
+  mask: url('heroicons/arrow-left-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-left-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-left-end-on-rectangle {
+  mask: url('heroicons/arrow-left-end-on-rectangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-left-end-on-rectangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-left-on-rectangle {
+  mask: url('heroicons/arrow-left-on-rectangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-left-on-rectangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-left-start-on-rectangle {
+  mask: url('heroicons/arrow-left-start-on-rectangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-left-start-on-rectangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-left {
+  mask: url('heroicons/arrow-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-long-down {
+  mask: url('heroicons/arrow-long-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-long-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-long-left {
+  mask: url('heroicons/arrow-long-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-long-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-long-right {
+  mask: url('heroicons/arrow-long-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-long-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-long-up {
+  mask: url('heroicons/arrow-long-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-long-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-path-rounded-square {
+  mask: url('heroicons/arrow-path-rounded-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-path-rounded-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-path {
+  mask: url('heroicons/arrow-path.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-path.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-right-circle {
+  mask: url('heroicons/arrow-right-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-right-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-right-end-on-rectangle {
+  mask: url('heroicons/arrow-right-end-on-rectangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-right-end-on-rectangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-right-on-rectangle {
+  mask: url('heroicons/arrow-right-on-rectangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-right-on-rectangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-right-start-on-rectangle {
+  mask: url('heroicons/arrow-right-start-on-rectangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-right-start-on-rectangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-right {
+  mask: url('heroicons/arrow-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-small-down {
+  mask: url('heroicons/arrow-small-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-small-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-small-left {
+  mask: url('heroicons/arrow-small-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-small-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-small-right {
+  mask: url('heroicons/arrow-small-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-small-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-small-up {
+  mask: url('heroicons/arrow-small-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-small-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-top-right-on-square {
+  mask: url('heroicons/arrow-top-right-on-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-top-right-on-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-trending-down {
+  mask: url('heroicons/arrow-trending-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-trending-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-trending-up {
+  mask: url('heroicons/arrow-trending-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-trending-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-down-left {
+  mask: url('heroicons/arrow-turn-down-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-down-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-down-right {
+  mask: url('heroicons/arrow-turn-down-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-down-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-left-down {
+  mask: url('heroicons/arrow-turn-left-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-left-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-left-up {
+  mask: url('heroicons/arrow-turn-left-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-left-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-right-down {
+  mask: url('heroicons/arrow-turn-right-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-right-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-right-up {
+  mask: url('heroicons/arrow-turn-right-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-right-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-up-left {
+  mask: url('heroicons/arrow-turn-up-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-up-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-turn-up-right {
+  mask: url('heroicons/arrow-turn-up-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-turn-up-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up-circle {
+  mask: url('heroicons/arrow-up-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up-left {
+  mask: url('heroicons/arrow-up-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up-on-square-stack {
+  mask: url('heroicons/arrow-up-on-square-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up-on-square-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up-on-square {
+  mask: url('heroicons/arrow-up-on-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up-on-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up-right {
+  mask: url('heroicons/arrow-up-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up-tray {
+  mask: url('heroicons/arrow-up-tray.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up-tray.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-up {
+  mask: url('heroicons/arrow-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-uturn-down {
+  mask: url('heroicons/arrow-uturn-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-uturn-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-uturn-left {
+  mask: url('heroicons/arrow-uturn-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-uturn-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-uturn-right {
+  mask: url('heroicons/arrow-uturn-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-uturn-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrow-uturn-up {
+  mask: url('heroicons/arrow-uturn-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrow-uturn-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrows-pointing-in {
+  mask: url('heroicons/arrows-pointing-in.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrows-pointing-in.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrows-pointing-out {
+  mask: url('heroicons/arrows-pointing-out.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrows-pointing-out.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrows-right-left {
+  mask: url('heroicons/arrows-right-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrows-right-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-arrows-up-down {
+  mask: url('heroicons/arrows-up-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/arrows-up-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-at-symbol {
+  mask: url('heroicons/at-symbol.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/at-symbol.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-backspace {
+  mask: url('heroicons/backspace.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/backspace.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-backward {
+  mask: url('heroicons/backward.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/backward.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-banknotes {
+  mask: url('heroicons/banknotes.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/banknotes.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-2 {
+  mask: url('heroicons/bars-2.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-2.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-3-bottom-left {
+  mask: url('heroicons/bars-3-bottom-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-3-bottom-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-3-bottom-right {
+  mask: url('heroicons/bars-3-bottom-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-3-bottom-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-3-center-left {
+  mask: url('heroicons/bars-3-center-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-3-center-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-3 {
+  mask: url('heroicons/bars-3.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-3.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-4 {
+  mask: url('heroicons/bars-4.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-4.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-arrow-down {
+  mask: url('heroicons/bars-arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bars-arrow-up {
+  mask: url('heroicons/bars-arrow-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bars-arrow-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-battery-0 {
+  mask: url('heroicons/battery-0.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/battery-0.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-battery-100 {
+  mask: url('heroicons/battery-100.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/battery-100.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-battery-50 {
+  mask: url('heroicons/battery-50.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/battery-50.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-beaker {
+  mask: url('heroicons/beaker.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/beaker.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bell-alert {
+  mask: url('heroicons/bell-alert.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bell-alert.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bell-slash {
+  mask: url('heroicons/bell-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bell-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bell-snooze {
+  mask: url('heroicons/bell-snooze.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bell-snooze.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bell {
+  mask: url('heroicons/bell.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bell.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bold {
+  mask: url('heroicons/bold.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bold.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bolt-slash {
+  mask: url('heroicons/bolt-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bolt-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bolt {
+  mask: url('heroicons/bolt.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bolt.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-book-open {
+  mask: url('heroicons/book-open.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/book-open.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bookmark-slash {
+  mask: url('heroicons/bookmark-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bookmark-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bookmark-square {
+  mask: url('heroicons/bookmark-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bookmark-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bookmark {
+  mask: url('heroicons/bookmark.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bookmark.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-briefcase {
+  mask: url('heroicons/briefcase.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/briefcase.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-bug-ant {
+  mask: url('heroicons/bug-ant.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/bug-ant.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-building-library {
+  mask: url('heroicons/building-library.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/building-library.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-building-office-2 {
+  mask: url('heroicons/building-office-2.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/building-office-2.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-building-office {
+  mask: url('heroicons/building-office.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/building-office.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-building-storefront {
+  mask: url('heroicons/building-storefront.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/building-storefront.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cake {
+  mask: url('heroicons/cake.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cake.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-calculator {
+  mask: url('heroicons/calculator.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/calculator.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-calendar-date-range {
+  mask: url('heroicons/calendar-date-range.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/calendar-date-range.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-calendar-days {
+  mask: url('heroicons/calendar-days.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/calendar-days.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-calendar {
+  mask: url('heroicons/calendar.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/calendar.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-camera {
+  mask: url('heroicons/camera.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/camera.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chart-bar-square {
+  mask: url('heroicons/chart-bar-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chart-bar-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chart-bar {
+  mask: url('heroicons/chart-bar.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chart-bar.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chart-pie {
+  mask: url('heroicons/chart-pie.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chart-pie.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-bottom-center-text {
+  mask: url('heroicons/chat-bubble-bottom-center-text.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-bottom-center-text.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-bottom-center {
+  mask: url('heroicons/chat-bubble-bottom-center.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-bottom-center.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-left-ellipsis {
+  mask: url('heroicons/chat-bubble-left-ellipsis.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-left-ellipsis.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-left-right {
+  mask: url('heroicons/chat-bubble-left-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-left-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-left {
+  mask: url('heroicons/chat-bubble-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-oval-left-ellipsis {
+  mask: url('heroicons/chat-bubble-oval-left-ellipsis.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-oval-left-ellipsis.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chat-bubble-oval-left {
+  mask: url('heroicons/chat-bubble-oval-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chat-bubble-oval-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-check-badge {
+  mask: url('heroicons/check-badge.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/check-badge.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-check-circle {
+  mask: url('heroicons/check-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/check-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-check {
+  mask: url('heroicons/check.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/check.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-double-down {
+  mask: url('heroicons/chevron-double-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-double-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-double-left {
+  mask: url('heroicons/chevron-double-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-double-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-double-right {
+  mask: url('heroicons/chevron-double-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-double-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-double-up {
+  mask: url('heroicons/chevron-double-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-double-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-down {
+  mask: url('heroicons/chevron-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-left {
+  mask: url('heroicons/chevron-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-right {
+  mask: url('heroicons/chevron-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-up-down {
+  mask: url('heroicons/chevron-up-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-up-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-chevron-up {
+  mask: url('heroicons/chevron-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/chevron-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-circle-stack {
+  mask: url('heroicons/circle-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/circle-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-clipboard-document-check {
+  mask: url('heroicons/clipboard-document-check.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/clipboard-document-check.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-clipboard-document-list {
+  mask: url('heroicons/clipboard-document-list.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/clipboard-document-list.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-clipboard-document {
+  mask: url('heroicons/clipboard-document.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/clipboard-document.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-clipboard {
+  mask: url('heroicons/clipboard.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/clipboard.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-clock {
+  mask: url('heroicons/clock.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/clock.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cloud-arrow-down {
+  mask: url('heroicons/cloud-arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cloud-arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cloud-arrow-up {
+  mask: url('heroicons/cloud-arrow-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cloud-arrow-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cloud {
+  mask: url('heroicons/cloud.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cloud.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-code-bracket-square {
+  mask: url('heroicons/code-bracket-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/code-bracket-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-code-bracket {
+  mask: url('heroicons/code-bracket.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/code-bracket.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cog-6-tooth {
+  mask: url('heroicons/cog-6-tooth.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cog-6-tooth.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cog-8-tooth {
+  mask: url('heroicons/cog-8-tooth.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cog-8-tooth.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cog {
+  mask: url('heroicons/cog.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cog.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-command-line {
+  mask: url('heroicons/command-line.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/command-line.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-computer-desktop {
+  mask: url('heroicons/computer-desktop.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/computer-desktop.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cpu-chip {
+  mask: url('heroicons/cpu-chip.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cpu-chip.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-credit-card {
+  mask: url('heroicons/credit-card.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/credit-card.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cube-transparent {
+  mask: url('heroicons/cube-transparent.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cube-transparent.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cube {
+  mask: url('heroicons/cube.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cube.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-currency-bangladeshi {
+  mask: url('heroicons/currency-bangladeshi.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/currency-bangladeshi.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-currency-dollar {
+  mask: url('heroicons/currency-dollar.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/currency-dollar.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-currency-euro {
+  mask: url('heroicons/currency-euro.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/currency-euro.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-currency-pound {
+  mask: url('heroicons/currency-pound.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/currency-pound.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-currency-rupee {
+  mask: url('heroicons/currency-rupee.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/currency-rupee.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-currency-yen {
+  mask: url('heroicons/currency-yen.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/currency-yen.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cursor-arrow-rays {
+  mask: url('heroicons/cursor-arrow-rays.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cursor-arrow-rays.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-cursor-arrow-ripple {
+  mask: url('heroicons/cursor-arrow-ripple.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/cursor-arrow-ripple.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-device-phone-mobile {
+  mask: url('heroicons/device-phone-mobile.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/device-phone-mobile.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-device-tablet {
+  mask: url('heroicons/device-tablet.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/device-tablet.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-divide {
+  mask: url('heroicons/divide.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/divide.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-arrow-down {
+  mask: url('heroicons/document-arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-arrow-up {
+  mask: url('heroicons/document-arrow-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-arrow-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-chart-bar {
+  mask: url('heroicons/document-chart-bar.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-chart-bar.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-check {
+  mask: url('heroicons/document-check.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-check.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-currency-bangladeshi {
+  mask: url('heroicons/document-currency-bangladeshi.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-currency-bangladeshi.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-currency-dollar {
+  mask: url('heroicons/document-currency-dollar.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-currency-dollar.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-currency-euro {
+  mask: url('heroicons/document-currency-euro.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-currency-euro.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-currency-pound {
+  mask: url('heroicons/document-currency-pound.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-currency-pound.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-currency-rupee {
+  mask: url('heroicons/document-currency-rupee.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-currency-rupee.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-currency-yen {
+  mask: url('heroicons/document-currency-yen.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-currency-yen.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-duplicate {
+  mask: url('heroicons/document-duplicate.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-duplicate.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-magnifying-glass {
+  mask: url('heroicons/document-magnifying-glass.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-magnifying-glass.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-minus {
+  mask: url('heroicons/document-minus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-minus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-plus {
+  mask: url('heroicons/document-plus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-plus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document-text {
+  mask: url('heroicons/document-text.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document-text.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-document {
+  mask: url('heroicons/document.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/document.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-ellipsis-horizontal-circle {
+  mask: url('heroicons/ellipsis-horizontal-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/ellipsis-horizontal-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-ellipsis-horizontal {
+  mask: url('heroicons/ellipsis-horizontal.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/ellipsis-horizontal.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-ellipsis-vertical {
+  mask: url('heroicons/ellipsis-vertical.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/ellipsis-vertical.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-envelope-open {
+  mask: url('heroicons/envelope-open.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/envelope-open.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-envelope {
+  mask: url('heroicons/envelope.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/envelope.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-equals {
+  mask: url('heroicons/equals.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/equals.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-exclamation-circle {
+  mask: url('heroicons/exclamation-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/exclamation-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-exclamation-triangle {
+  mask: url('heroicons/exclamation-triangle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/exclamation-triangle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-eye-dropper {
+  mask: url('heroicons/eye-dropper.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/eye-dropper.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-eye-slash {
+  mask: url('heroicons/eye-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/eye-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-eye {
+  mask: url('heroicons/eye.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/eye.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-face-frown {
+  mask: url('heroicons/face-frown.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/face-frown.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-face-smile {
+  mask: url('heroicons/face-smile.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/face-smile.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-film {
+  mask: url('heroicons/film.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/film.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-finger-print {
+  mask: url('heroicons/finger-print.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/finger-print.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-fire {
+  mask: url('heroicons/fire.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/fire.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-flag {
+  mask: url('heroicons/flag.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/flag.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-folder-arrow-down {
+  mask: url('heroicons/folder-arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/folder-arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-folder-minus {
+  mask: url('heroicons/folder-minus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/folder-minus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-folder-open {
+  mask: url('heroicons/folder-open.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/folder-open.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-folder-plus {
+  mask: url('heroicons/folder-plus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/folder-plus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-folder {
+  mask: url('heroicons/folder.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/folder.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-forward {
+  mask: url('heroicons/forward.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/forward.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-funnel {
+  mask: url('heroicons/funnel.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/funnel.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-gif {
+  mask: url('heroicons/gif.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/gif.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-gift-top {
+  mask: url('heroicons/gift-top.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/gift-top.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-gift {
+  mask: url('heroicons/gift.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/gift.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-globe-alt {
+  mask: url('heroicons/globe-alt.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/globe-alt.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-globe-americas {
+  mask: url('heroicons/globe-americas.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/globe-americas.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-globe-asia-australia {
+  mask: url('heroicons/globe-asia-australia.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/globe-asia-australia.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-globe-europe-africa {
+  mask: url('heroicons/globe-europe-africa.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/globe-europe-africa.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-h1 {
+  mask: url('heroicons/h1.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/h1.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-h2 {
+  mask: url('heroicons/h2.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/h2.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-h3 {
+  mask: url('heroicons/h3.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/h3.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-hand-raised {
+  mask: url('heroicons/hand-raised.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/hand-raised.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-hand-thumb-down {
+  mask: url('heroicons/hand-thumb-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/hand-thumb-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-hand-thumb-up {
+  mask: url('heroicons/hand-thumb-up.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/hand-thumb-up.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-hashtag {
+  mask: url('heroicons/hashtag.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/hashtag.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-heart {
+  mask: url('heroicons/heart.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/heart.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-home-modern {
+  mask: url('heroicons/home-modern.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/home-modern.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-home {
+  mask: url('heroicons/home.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/home.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-identification {
+  mask: url('heroicons/identification.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/identification.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-inbox-arrow-down {
+  mask: url('heroicons/inbox-arrow-down.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/inbox-arrow-down.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-inbox-stack {
+  mask: url('heroicons/inbox-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/inbox-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-inbox {
+  mask: url('heroicons/inbox.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/inbox.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-information-circle {
+  mask: url('heroicons/information-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/information-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-italic {
+  mask: url('heroicons/italic.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/italic.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-key {
+  mask: url('heroicons/key.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/key.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-language {
+  mask: url('heroicons/language.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/language.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-lifebuoy {
+  mask: url('heroicons/lifebuoy.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/lifebuoy.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-light-bulb {
+  mask: url('heroicons/light-bulb.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/light-bulb.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-link-slash {
+  mask: url('heroicons/link-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/link-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-link {
+  mask: url('heroicons/link.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/link.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-list-bullet {
+  mask: url('heroicons/list-bullet.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/list-bullet.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-lock-closed {
+  mask: url('heroicons/lock-closed.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/lock-closed.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-lock-open {
+  mask: url('heroicons/lock-open.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/lock-open.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-magnifying-glass-circle {
+  mask: url('heroicons/magnifying-glass-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/magnifying-glass-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-magnifying-glass-minus {
+  mask: url('heroicons/magnifying-glass-minus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/magnifying-glass-minus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-magnifying-glass-plus {
+  mask: url('heroicons/magnifying-glass-plus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/magnifying-glass-plus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-magnifying-glass {
+  mask: url('heroicons/magnifying-glass.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/magnifying-glass.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-map-pin {
+  mask: url('heroicons/map-pin.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/map-pin.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-map {
+  mask: url('heroicons/map.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/map.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-megaphone {
+  mask: url('heroicons/megaphone.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/megaphone.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-microphone {
+  mask: url('heroicons/microphone.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/microphone.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-minus-circle {
+  mask: url('heroicons/minus-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/minus-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-minus-small {
+  mask: url('heroicons/minus-small.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/minus-small.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-minus {
+  mask: url('heroicons/minus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/minus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-moon {
+  mask: url('heroicons/moon.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/moon.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-musical-note {
+  mask: url('heroicons/musical-note.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/musical-note.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-newspaper {
+  mask: url('heroicons/newspaper.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/newspaper.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-no-symbol {
+  mask: url('heroicons/no-symbol.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/no-symbol.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-numbered-list {
+  mask: url('heroicons/numbered-list.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/numbered-list.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-paint-brush {
+  mask: url('heroicons/paint-brush.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/paint-brush.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-paper-airplane {
+  mask: url('heroicons/paper-airplane.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/paper-airplane.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-paper-clip {
+  mask: url('heroicons/paper-clip.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/paper-clip.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-pause-circle {
+  mask: url('heroicons/pause-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/pause-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-pause {
+  mask: url('heroicons/pause.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/pause.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-pencil-square {
+  mask: url('heroicons/pencil-square.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/pencil-square.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-pencil {
+  mask: url('heroicons/pencil.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/pencil.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-percent-badge {
+  mask: url('heroicons/percent-badge.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/percent-badge.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-phone-arrow-down-left {
+  mask: url('heroicons/phone-arrow-down-left.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/phone-arrow-down-left.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-phone-arrow-up-right {
+  mask: url('heroicons/phone-arrow-up-right.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/phone-arrow-up-right.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-phone-x-mark {
+  mask: url('heroicons/phone-x-mark.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/phone-x-mark.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-phone {
+  mask: url('heroicons/phone.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/phone.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-photo {
+  mask: url('heroicons/photo.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/photo.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-play-circle {
+  mask: url('heroicons/play-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/play-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-play-pause {
+  mask: url('heroicons/play-pause.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/play-pause.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-play {
+  mask: url('heroicons/play.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/play.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-plus-circle {
+  mask: url('heroicons/plus-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/plus-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-plus-small {
+  mask: url('heroicons/plus-small.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/plus-small.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-plus {
+  mask: url('heroicons/plus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/plus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-power {
+  mask: url('heroicons/power.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/power.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-presentation-chart-bar {
+  mask: url('heroicons/presentation-chart-bar.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/presentation-chart-bar.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-presentation-chart-line {
+  mask: url('heroicons/presentation-chart-line.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/presentation-chart-line.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-printer {
+  mask: url('heroicons/printer.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/printer.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-puzzle-piece {
+  mask: url('heroicons/puzzle-piece.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/puzzle-piece.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-qr-code {
+  mask: url('heroicons/qr-code.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/qr-code.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-question-mark-circle {
+  mask: url('heroicons/question-mark-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/question-mark-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-queue-list {
+  mask: url('heroicons/queue-list.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/queue-list.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-radio {
+  mask: url('heroicons/radio.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/radio.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-receipt-percent {
+  mask: url('heroicons/receipt-percent.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/receipt-percent.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-receipt-refund {
+  mask: url('heroicons/receipt-refund.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/receipt-refund.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-rectangle-group {
+  mask: url('heroicons/rectangle-group.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/rectangle-group.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-rectangle-stack {
+  mask: url('heroicons/rectangle-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/rectangle-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-rocket-launch {
+  mask: url('heroicons/rocket-launch.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/rocket-launch.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-rss {
+  mask: url('heroicons/rss.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/rss.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-scale {
+  mask: url('heroicons/scale.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/scale.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-scissors {
+  mask: url('heroicons/scissors.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/scissors.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-server-stack {
+  mask: url('heroicons/server-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/server-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-server {
+  mask: url('heroicons/server.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/server.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-share {
+  mask: url('heroicons/share.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/share.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-shield-check {
+  mask: url('heroicons/shield-check.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/shield-check.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-shield-exclamation {
+  mask: url('heroicons/shield-exclamation.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/shield-exclamation.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-shopping-bag {
+  mask: url('heroicons/shopping-bag.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/shopping-bag.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-shopping-cart {
+  mask: url('heroicons/shopping-cart.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/shopping-cart.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-signal-slash {
+  mask: url('heroicons/signal-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/signal-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-signal {
+  mask: url('heroicons/signal.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/signal.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-slash {
+  mask: url('heroicons/slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-sparkles {
+  mask: url('heroicons/sparkles.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/sparkles.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-speaker-wave {
+  mask: url('heroicons/speaker-wave.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/speaker-wave.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-speaker-x-mark {
+  mask: url('heroicons/speaker-x-mark.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/speaker-x-mark.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-square-2-stack {
+  mask: url('heroicons/square-2-stack.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/square-2-stack.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-square-3-stack-3d {
+  mask: url('heroicons/square-3-stack-3d.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/square-3-stack-3d.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-squares-2x2 {
+  mask: url('heroicons/squares-2x2.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/squares-2x2.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-squares-plus {
+  mask: url('heroicons/squares-plus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/squares-plus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-star {
+  mask: url('heroicons/star.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/star.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-stop-circle {
+  mask: url('heroicons/stop-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/stop-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-stop {
+  mask: url('heroicons/stop.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/stop.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-strikethrough {
+  mask: url('heroicons/strikethrough.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/strikethrough.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-sun {
+  mask: url('heroicons/sun.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/sun.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-swatch {
+  mask: url('heroicons/swatch.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/swatch.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-table-cells {
+  mask: url('heroicons/table-cells.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/table-cells.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-tag {
+  mask: url('heroicons/tag.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/tag.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-ticket {
+  mask: url('heroicons/ticket.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/ticket.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-trash {
+  mask: url('heroicons/trash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/trash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-trophy {
+  mask: url('heroicons/trophy.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/trophy.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-truck {
+  mask: url('heroicons/truck.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/truck.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-tv {
+  mask: url('heroicons/tv.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/tv.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-underline {
+  mask: url('heroicons/underline.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/underline.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-user-circle {
+  mask: url('heroicons/user-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/user-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-user-group {
+  mask: url('heroicons/user-group.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/user-group.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-user-minus {
+  mask: url('heroicons/user-minus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/user-minus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-user-plus {
+  mask: url('heroicons/user-plus.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/user-plus.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-user {
+  mask: url('heroicons/user.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/user.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-users {
+  mask: url('heroicons/users.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/users.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-variable {
+  mask: url('heroicons/variable.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/variable.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-video-camera-slash {
+  mask: url('heroicons/video-camera-slash.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/video-camera-slash.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-video-camera {
+  mask: url('heroicons/video-camera.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/video-camera.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-view-columns {
+  mask: url('heroicons/view-columns.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/view-columns.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-viewfinder-circle {
+  mask: url('heroicons/viewfinder-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/viewfinder-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-wallet {
+  mask: url('heroicons/wallet.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/wallet.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-wifi {
+  mask: url('heroicons/wifi.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/wifi.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-window {
+  mask: url('heroicons/window.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/window.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-wrench-screwdriver {
+  mask: url('heroicons/wrench-screwdriver.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/wrench-screwdriver.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-wrench {
+  mask: url('heroicons/wrench.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/wrench.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-x-circle {
+  mask: url('heroicons/x-circle.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/x-circle.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heroicon-x-mark {
+  mask: url('heroicons/x-mark.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('heroicons/x-mark.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  background-color: currentColor;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
