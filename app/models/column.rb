@@ -12,16 +12,18 @@ class Column < ApplicationRecord
   private
 
   def broadcast_column_updated
-    Turbo::StreamsChannel.broadcast_action_to(
-      project,
-      action: 'object_updated',
-      attributes: { 
-        id:, 
-        type: self.class.name.downcase, 
-        cache_key: self.cache_key,
-        fingerprint: self.fingerprint
-      },
-      render: false
-    )
+    Stage2.track_changed(self)
+
+    # Turbo::StreamsChannel.broadcast_action_to(
+    #   project,
+    #   action: 'object_updated',
+    #   attributes: { 
+    #     id:, 
+    #     type: self.class.name.downcase, 
+    #     cache_key: self.cache_key,
+    #     fingerprint: self.fingerprint
+    #   },
+    #   render: false
+    # )
   end
 end

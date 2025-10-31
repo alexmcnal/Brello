@@ -20,28 +20,14 @@ class CardsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:board_id])
-    @card = Card.new(card_params)
+    @card = Forms::CreateCard.new(card_params)
 
     if @card.save
-      Action.create!(
-        user: current_user,
-        card: @card,
-        action: "created_card",
-        metadata: {
-          title: @card.title,
-          description: @card.description
-        }
-      )
-
       respond_to do |format|
         format.html { redirect_to project_board_path(@project, @board) }
         format.turbo_stream {
-          render turbo_stream: [
-            close_dialog,
-            update_column(@card.column)
-          ]
+          render turbo_stream: close_dialog
         }
-        broadcast_card_updated(@card)
       end
     else
       @available_columns = @board.columns
@@ -78,12 +64,11 @@ class CardsController < ApplicationController
 
       respond_to do |format|
         format.html { head :ok }
-        format.turbo_stream { 
-          render turbo_stream: update_card(@card)
-        }
+        format.turbo_stream { render turbo_stream: update_card(@card) }
         format.json { head :ok }
       end
 
+      Stage2.broadcast_changes(@project)
       # broadcast_card_updated(@card)
     else
       @available_columns = @board.columns
@@ -111,6 +96,10 @@ class CardsController < ApplicationController
 
   def update_column(column)
     turbo_stream.replace(dom_id(column), partial: "boards/columns/column", locals: { column: })
+  end
+
+  def update_column_component(column)
+    update_component(SomeComponent.new(column:))
   end
 
   def broadcast_card_updated(card)

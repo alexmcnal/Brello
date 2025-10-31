@@ -26,6 +26,7 @@ export default class extends Controller {
 }
 
 Turbo.StreamActions.object_updated = function () {
+  console.log('object_updated', this)
   const cache_key = this.getAttribute("cache_key")
   const fingerprint = this.getAttribute("fingerprint")
 

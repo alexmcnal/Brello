@@ -34,7 +34,7 @@
     <%= turbo_refreshes_with method: :morph %>
   </head>
 
-  <body>
+  <body data-controller="dialog">
     <%= render 'dialog' %>
     <%= render 'drawer' %>
     <%= yield %>
