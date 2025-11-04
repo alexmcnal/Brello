@@ -1,0 +1,25 @@
+.project-page {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-page__header {
+  min-height: 5rem;
+  background-color: red;
+}
+
+.project-page__main {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-page__sidebar {
+  background-color: green;
+  min-width: 25%;
+}
+
+.project-page__content {
+  background-color: lightsteelblue;
+  min-width: 75%;
+}

@@ -27,7 +27,7 @@ export default class extends Controller {
 
   open(e) {
     e.preventDefault()
-    openDialog(this.element.href)
+    openDialog(e.target.href)
   }
 
   close() {

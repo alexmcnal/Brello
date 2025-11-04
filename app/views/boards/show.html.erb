@@ -1,11 +1,5 @@
-<% turbo_page_requires_reload %>
-
-<h1><%= @board.name %></h1>
-<h3><%= @board.description %></h3>
-<%= link_to "Edit Board", edit_project_board_path(@project, @board) %>
-
 <div class="toolbar">
-  <%= link_to "Add Card", new_project_board_card_path(@project, @board), class: "button__primary", data: { controller: "dialog", action: "dialog#open" }%>
+  <%= link_to "Add Card", new_project_board_card_path(@project, @board), class: "button__primary", data: { action: "dialog#open" }%>
   <%= link_to "Add Column", new_project_board_board_column_path(@project, @board), class: "button__primary" %>
 </div>
 
