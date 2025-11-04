@@ -27,7 +27,7 @@ export default class extends Controller {
 
   open(e) {
     e.preventDefault()
-    openDrawer(this.element.href)
+    openDrawer(e.target.href)
   }
 
   close() {
