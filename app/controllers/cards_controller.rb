@@ -20,9 +20,9 @@ class CardsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:board_id])
-    @card = Forms::CreateCard.new(card_params)
-    if @card.save
+    @card = Card.new(card_params)
 
+    if @card.save
       Action.create!(
         user: current_user,
         card: @card,
@@ -45,7 +45,7 @@ class CardsController < ApplicationController
       end
     else
       @available_columns = @board.columns
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -110,7 +110,7 @@ class CardsController < ApplicationController
   end
 
   def update_column(column)
-    turbo_stream.replace(dom_id(column), partial: "columns/column", locals: { column: })
+    turbo_stream.replace(dom_id(column), partial: "boards/columns/column", locals: { column: })
   end
 
   def broadcast_card_updated(card)
