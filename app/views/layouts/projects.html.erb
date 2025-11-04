@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <%= render 'html_head' %>
+
+  <body class="project-page" data-controller="dialog drawer">
+    <%= render 'dialog' %>
+    <%= render 'drawer' %>
+
+    <div class="project-page__header">
+      <%= render "project_header" %>
+    </div>
+
+    <div class="project-page__main">
+      <div class="project-page__sidebar">
+        <%= render "project_sidebar" %>
+      </div>
+      <div class="project-page__content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

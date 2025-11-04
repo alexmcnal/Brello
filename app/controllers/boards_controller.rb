@@ -1,5 +1,7 @@
 class BoardsController < ApplicationController
 
+  layout 'projects'
+
   def show
     @project = Project.find(params[:project_id])
     @board = @project.boards.find(params[:id])
