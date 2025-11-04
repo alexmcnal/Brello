@@ -24,7 +24,7 @@ class Forms::CreateCard
   private
 
   def create_card
-    Card.create!(title:, column_id:)
+    Card.create!(title:, description:, column_id:)
   end
 
   def record_action(card)
