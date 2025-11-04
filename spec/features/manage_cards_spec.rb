@@ -70,7 +70,7 @@ RSpec.describe 'Manage Cards', type: :feature, js: true do
 
       visit project_board_path(project, board)
 
-      expect(page).to have_css('.card'), 'No cards found on the page'
+      expect(page).to have_content('Newly Created Card'), 'No cards found on the page'
       within('.card') do
         expect(page).to have_css('.card__title'), 'Card title div not found'
         expect(page).to have_css('.card__description'), 'Card description div not found'
