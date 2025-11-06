@@ -1,4 +1,11 @@
 class ColumnsController < ApplicationController 
+
+  layout 'projects'
+
+  def index
+    @project = Project.find(params[:project_id])
+    @columns = @project.columns
+  end
   
   def show
     @project = Project.find(params[:project_id])

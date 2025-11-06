@@ -1,25 +1,35 @@
 .project-page {
-  background-color: yellow;
+  row-gap: 0.5rem;
   display: flex;
   flex-direction: column;
+  min-width: 640px;
 }
 
 .project-page__header {
-  min-height: 5rem;
   background-color: red;
+  border-radius: 0.75rem;
+  outline-style: solid;
 }
 
 .project-page__main {
   display: flex;
   flex-direction: row;
+  column-gap: 0.5rem;
+  box-sizing: border-box;
 }
 
 .project-page__sidebar {
   background-color: green;
-  min-width: 25%;
+  min-width: 12rem;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+  outline-style: solid;
 }
 
 .project-page__content {
-  background-color: lightsteelblue;
-  min-width: 75%;
+  background-color: yellow;
+  flex-grow: 1;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  outline-style: solid;
 }

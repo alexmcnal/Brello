@@ -14,14 +14,3 @@
     </div>
   <% end %>
 <% end %>
-
-<div class="columns">
-  <% @columns.each do |column| %>
-    <%= link_to edit_project_column_path(@project, column) do %>
-      <div class="column-card">
-        <h3><%= column.name %></h3>
-        <h4><%= column.description %></h4>
-      </div>
-    <% end %>
-  <% end %>
-</div>
